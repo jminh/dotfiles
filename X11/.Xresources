@@ -1,0 +1,117 @@
+! to match gnome-terminal "Linux console" scheme
+! foreground/background
+! ############################################
+!URxvt*background: #000000
+!URxvt*foreground: #ffffff
+!! black
+!URxvt.color0  : #000000
+!URxvt.color8  : #555555
+!! red
+!URxvt.color1  : #AA0000
+!URxvt.color9  : #FF5555
+!! green
+!URxvt.color2  : #00AA00
+!URxvt.color10 : #55FF55
+!! yellow
+!URxvt.color3  : #AA5500
+!URxvt.color11 : #FFFF55
+!! blue
+!URxvt.color4  : #0000AA
+!URxvt.color12 : #5555FF
+!! magenta
+!URxvt.color5  : #AA00AA
+!URxvt.color13 : #FF55FF
+!! cyan
+!URxvt.color6  : #00AAAA
+!URxvt.color14 : #55FFFF
+!! white
+!URxvt.color7  : #AAAAAA
+!URxvt.color15 : #FFFFFF
+! ############################################
+
+URxvt*termName: rxvt-256color
+URxvt*depth: 32
+
+!Theme Ten
+*background: rgb:1a/1a/1a
+*foreground: rgb:d6/d6/d6
+*color0:     rgb:00/00/00
+*color1:     rgb:98/56/5e
+*color2:     rgb:66/82/5d
+*color3:     rgb:96/91/76
+*color4:     rgb:4d/65/85
+*color5:     rgb:96/73/95
+*color6:     rgb:5f/7f/7b
+*color7:     rgb:b3/b3/b3
+*color8:     rgb:73/73/73
+*color9:     rgb:cf/a3/a9
+*color10:    rgb:ca/f7/bb
+*color11:    rgb:ff/f8/bc
+*color12:    rgb:83/a3/be
+*color13:    rgb:bb/a9/cf
+*color14:    rgb:96/cc/cc
+*color15:    rgb:ff/ff/ff
+
+! disable ISO 14755 mode
+!URxvt.iso14755: false
+!URxvt.iso14755_52: false
+
+! scroll
+URxvt*scrollstyle: plain
+!URxvt*mouseWheelScrollPage: 1
+URxvt*mouseWheelScrollPage: 0.5
+URxvt*cursorBlink: 1
+!URxvt.scrollBar_right: true
+URxvt.scrollBar: false
+
+
+! font
+! check : xrdb -query
+! URxvt*font:xft:monaco:size=12,xft:Inconsolata:size=14,xft:Terminus:size=12,xft:DejaVu Sans Mono:size=12
+!URxvt*font:xft:Inconsolata:size=14,xft:Terminess:size=12,xft:DejaVu Sans Mono:size=12
+URxvt*font:xft:Inconsolata:size=14,xft:Terminus:size=16,xft:LiHei Pro:size=14:antialias=Ture,xft:DejaVu Sans Mono:size=16
+URxvt*internalBorder: 1
+
+
+! Extensions
+URxvt*perl-lib: /usr/lib/urxvt/perl/
+URxvt*perl-ext-common: default,searchable-scrollback,clipboard,url-select,keyboard-select
+
+
+! http://cgit.freedesktop.org/xorg/proto/x11proto/plain/keysymdef.h
+! M = Meta => alt
+! C = Control
+! For screen
+! ! \001 is C-a.
+URxvt.keysym*C-Left:  \001p
+URxvt.keysym*C-Right: \001n
+
+! misc
+! urxvt-perls
+!
+! "Alt+u"   Enter selection mode
+! "k"       Select next upward URL
+! "j"       Select next downward URL
+! "Return"  Open selected URL in browser and quit selection mode
+! "y"       Copy (yank) selected URL and quit selection mode
+! "Esc"     Cancel URL selection mode
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+urxvt*modifier: alt
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+URxvt*saveLines: 4095
+
+URxvt*url-launcher: /usr/bin/chromium
+URxvt*url-select.launcher: chromium
+URxvt.url-select.underline: true
+! }}}
+
+! vim:set fdm=marker:
+
