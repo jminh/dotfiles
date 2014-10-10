@@ -1,0 +1,9 @@
+shell bash # Tell screen your default shell
+
+startup_message off # Turn off start message
+
+altscreen on # Refresh the display when exiting programs
+
+shelltitle '$ |bash' # Dynamic window titled for running program
+
+hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %Y/%m/%d%{= .m} %0c:%s "
