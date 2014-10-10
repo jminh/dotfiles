@@ -1,0 +1,11 @@
+[user]
+	email = archaicdust@gmail.com
+	name = ming
+[gui]
+	spellingdictionary = none
+	fontui = -family \"Droid Sans\" -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"Droid Sans\" -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+[color]
+	ui = true
+[core]
+	editor = vim
