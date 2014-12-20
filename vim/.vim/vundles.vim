@@ -38,7 +38,7 @@ let g:Powerline_symbols='unicode'
 Bundle 'FuzzyFinder'
 
 " appearance {{{
-Bundle "mhinz/vim-startify"
+Bundle 'mhinz/vim-startify'
 " colorscheme
 Bundle 'tomasr/molokai'
 Bundle 'tpope/vim-vividchalk'
@@ -46,13 +46,13 @@ Bundle 'tpope/vim-vividchalk'
 " Bundle 'yonchu/accelerated-smooth-scroll'
 
 " numbers Vim 7.3+
-Bundle 'myusuf3/numbers.vim' 
+Bundle 'myusuf3/numbers.vim'
 
-Bundle "Yggdroot/indentLine"
+Bundle 'Yggdroot/indentLine'
 " map <leader>il :IndentLinesToggle<CR>
 Bundle 'Lokaltog/vim-powerline'
 
-" Bundle "xsunsmile/showmarks.git"
+" Bundle 'xsunsmile/showmarks.git'
 " }}}
 
 " project {{{
@@ -66,7 +66,7 @@ Bundle 'majutsushi/tagbar'
 " }}}
 
 " git {{{
-Bundle "gregsexton/gitv"
+Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 " }}}
@@ -85,7 +85,7 @@ Bundle 'rking/ag.vim'
 Bundle 'airblade/vim-rooter'
 Bundle 'vim-scripts/EasyGrep'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle "justinmk/vim-sneak"
+Bundle 'justinmk/vim-sneak'
 Bundle 'vim-scripts/IndexedSearch'
 
 " usage: https://github.com/bronson/vim-visual-star-search
@@ -130,7 +130,7 @@ Bundle 'plasticboy/vim-markdown'
 " imporvements {{{
 Bundle 'AndrewRadev/linediff.vim'
 
-Bundle "Raimondi/delimitMate"
+Bundle 'Raimondi/delimitMate'
 " It requires Vim 7.3.885 or above and "if_lua" enabled Vim.
 " Bundle 'Shougo/neocomplete.vim'
 
@@ -140,16 +140,16 @@ Bundle 'vim-scripts/Mark'
 " use multiple cursors like Sublime Text editor.
 Bundle 'terryma/vim-multiple-cursors'
 " Bundle "vim-scripts/AutoTag.git"
-Bundle "craigemery/vim-autotag"
-Bundle "chrisbra/NrrwRgn"
-Bundle "sjl/gundo.vim"
+Bundle 'craigemery/vim-autotag'
+Bundle 'chrisbra/NrrwRgn'
+Bundle 'sjl/gundo.vim'
 Bundle 'mbbill/undotree'
-Bundle "goldfeld/ctrlr.vim"
+Bundle 'goldfeld/ctrlr.vim'
 
-Bundle "bogado/file-line"
-Bundle "rhysd/clever-f.vim"
+Bundle 'bogado/file-line'
+Bundle 'rhysd/clever-f.vim'
 " 
-Bundle "vim-scripts/lastpos.vim"
+Bundle 'vim-scripts/lastpos.vim'
 " "}}}
 
 Bundle 'joonty/vdebug.git'
