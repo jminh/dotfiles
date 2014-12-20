@@ -15,149 +15,154 @@ filetype off " Vundle required!
 " http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
 " Setting up Vundle - the vim plugin bundler
 let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
 if !filereadable(vundle_readme)
   echo "Installing Vundle.."
   echo ""
   silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  silent !git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   let iCanHazVundle=0
 endif
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-" let Vundle manage Vundle required!
-Bundle 'gmarik/vundle'
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+"
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
 " My Bundles here:
 "
 " original repos on github
 set laststatus=2
 let g:Powerline_symbols='unicode'
-Bundle 'FuzzyFinder'
+Plugin 'FuzzyFinder'
 
 " appearance {{{
-Bundle 'mhinz/vim-startify'
+Plugin 'mhinz/vim-startify'
 " colorscheme
-Bundle 'tomasr/molokai'
-Bundle 'tpope/vim-vividchalk'
+Plugin 'tomasr/molokai'
+Plugin 'tpope/vim-vividchalk'
 
-" Bundle 'yonchu/accelerated-smooth-scroll'
+" Plugin 'yonchu/accelerated-smooth-scroll'
 
 " numbers Vim 7.3+
-Bundle 'myusuf3/numbers.vim'
+Plugin 'myusuf3/numbers.vim'
 
-Bundle 'Yggdroot/indentLine'
+Plugin 'Yggdroot/indentLine'
 " map <leader>il :IndentLinesToggle<CR>
-Bundle 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/vim-powerline'
 
-" Bundle 'xsunsmile/showmarks.git'
+" Plugin 'xsunsmile/showmarks.git'
 " }}}
 
 " project {{{
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'kien/ctrlp.vim'
 
-Bundle 'vim-scripts/TaskList.vim'
+Plugin 'vim-scripts/TaskList.vim'
 
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 " }}}
 
 " git {{{
-Bundle 'gregsexton/gitv'
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
+Plugin 'gregsexton/gitv'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 " }}}
 
 
 
 " Provides tab completion while inside the “/” search
-Bundle 'vim-scripts/SearchComplete'
+Plugin 'vim-scripts/SearchComplete'
 
 " search {{{
-Bundle 'osyo-manga/vim-over'
-Bundle 'mileszs/ack.vim'
-" Bundle 'petdance/ack2'
-Bundle 'rking/ag.vim'
+Plugin 'osyo-manga/vim-over'
+Plugin 'mileszs/ack.vim'
+" Plugin 'petdance/ack2'
+Plugin 'rking/ag.vim'
 " vim-rooter (ack, ag, grep in the top level project dir)
-Bundle 'airblade/vim-rooter'
-Bundle 'vim-scripts/EasyGrep'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'justinmk/vim-sneak'
-Bundle 'vim-scripts/IndexedSearch'
+Plugin 'airblade/vim-rooter'
+Plugin 'vim-scripts/EasyGrep'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'justinmk/vim-sneak'
+Plugin 'vim-scripts/IndexedSearch'
 
 " usage: https://github.com/bronson/vim-visual-star-search
-Bundle 'bronson/vim-visual-star-search'
+Plugin 'bronson/vim-visual-star-search'
 " vim bookmark
-Bundle 'MattesGroeger/vim-bookmarks'
+Plugin 'MattesGroeger/vim-bookmarks'
 " }}}
 
-Bundle 'vim-scripts/mru.vim'
+Plugin 'vim-scripts/mru.vim'
 
-Bundle 'L9'
+Plugin 'L9'
 " vim-autocomplpop
 "Automatic trigger complete popup menu (need L9)
-Bundle 'othree/vim-autocomplpop'
+Plugin 'othree/vim-autocomplpop'
 
 
 " vim-scripts pythoncomplete
 " To use this plugin, make sure ftplugins are enabled, via "filetype plugin
 " on".
-Bundle 'vim-scripts/pythoncomplete'
+Plugin 'vim-scripts/pythoncomplete'
 
 " Useful for python/vim scripts
-Bundle 'michaeljsmith/vim-indent-object'
+Plugin 'michaeljsmith/vim-indent-object'
 
 " Syntax checking hacks for vim
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
-" Bundle 'vim-scripts/Conque-Shell'
-Bundle 'acx0/Conque-Shell'
+" Plugin 'vim-scripts/Conque-Shell'
+Plugin 'acx0/Conque-Shell'
 
-Bundle 'benmills/vimux'
+Plugin 'benmills/vimux'
 
 " C/C++ {{{
-Bundle 'vim-scripts/a.vim'
+Plugin 'vim-scripts/a.vim'
 " }}}
 
 " markdown {{{
-Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 " }}}
 
 " imporvements {{{
-Bundle 'AndrewRadev/linediff.vim'
+Plugin 'AndrewRadev/linediff.vim'
 
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 " It requires Vim 7.3.885 or above and "if_lua" enabled Vim.
-" Bundle 'Shougo/neocomplete.vim'
+" Plugin 'Shougo/neocomplete.vim'
 
-Bundle 'vim-scripts/Mark'
-" Bundle 'vim-scripts/Mark--Karkat'
+Plugin 'vim-scripts/Mark'
+" Plugin 'vim-scripts/Mark--Karkat'
 
 " use multiple cursors like Sublime Text editor.
-Bundle 'terryma/vim-multiple-cursors'
-" Bundle "vim-scripts/AutoTag.git"
-Bundle 'craigemery/vim-autotag'
-Bundle 'chrisbra/NrrwRgn'
-Bundle 'sjl/gundo.vim'
-Bundle 'mbbill/undotree'
-Bundle 'goldfeld/ctrlr.vim'
+Plugin 'terryma/vim-multiple-cursors'
+" Plugin "vim-scripts/AutoTag.git"
+Plugin 'craigemery/vim-autotag'
+Plugin 'chrisbra/NrrwRgn'
+Plugin 'sjl/gundo.vim'
+Plugin 'mbbill/undotree'
+Plugin 'goldfeld/ctrlr.vim'
 
-Bundle 'bogado/file-line'
-Bundle 'rhysd/clever-f.vim'
+Plugin 'bogado/file-line'
+Plugin 'rhysd/clever-f.vim'
 " 
-Bundle 'vim-scripts/lastpos.vim'
+Plugin 'vim-scripts/lastpos.vim'
 " "}}}
 
-Bundle 'joonty/vdebug.git'
+Plugin 'joonty/vdebug.git'
 " The plugins listed in ~/.vim/.vundles.local will be added here to
 " allow the user to add vim plugins to yadr without the need for a fork.
 if filereadable(expand("~/.yadr/vim/.vundles.local"))
   source ~/.yadr/vim/.vundles.local
 endif
 
-" Filetype plugin indent on is required by vundle
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 filetype plugin indent on
