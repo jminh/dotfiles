@@ -13,3 +13,5 @@ map key (,t) conflict
 TaskList.vim uses ,t mapping,
 you can change it to ,T.
 
+    $ vim +369 ~/.vim/bundle/TaskList.vim/plugin/tasklist.vim
+
