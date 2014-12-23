@@ -111,6 +111,9 @@ Plugin 'othree/vim-autocomplpop'
 " on".
 Plugin 'vim-scripts/pythoncomplete'
 
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
 " Useful for python/vim scripts
 Plugin 'michaeljsmith/vim-indent-object'
 
