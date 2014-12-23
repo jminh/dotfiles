@@ -69,6 +69,49 @@ Generate a file .tags under the woring directory:
     $ ctags -R -f .tags
 
 
+## Code navigation ( ctags + guard-ctags-bundler )
+
+Prerequisite
+
+  + ctags
+  + [gem](http://guides.rubygems.org/rubygems-basics/)
+
+Install the gem([guard-ctags-bundler](https://github.com/ivalkeen/guard-ctags-bundler)):
+
+    $ gem install guard-ctags-bundler
+
+Add it to your Gemfile (inside development group):
+
+    group :development do
+        gem 'guard-ctags-bundler'
+    end
+
+Add it to your Guardfile with
+
+    guard init ctags-bundler
+
+Configure the Guardfile, for example
+
+    guard 'ctags-bundler', :src_path => ["app", "lib", "spec/support"] do
+      watch(/^(app|lib|spec\/support)\/.*\.rb$/)
+      watch('Gemfile.lock')
+    end
+
+Now run guard and it will start watching your files will generate tags and gems.tags files.
+
+    $ guard
+
+vim is not looking for gems.tags by default,
+you'll need to edit your .vimrc and add set tags+=gems.tags line,
+then restart vim.
+
+Reference: [Supercharge your VIM into IDE with CTags](http://blog.sensible.io/2014/05/09/supercharge-your-vim-into-ide-with-ctags.html)
+
+Reference [guard-ctags-bundler](https://github.com/ivalkeen/guard-ctags-bundler)
+
+Reference: [guard-sublime-ctags](https://github.com/sunteya/guard-sublime-ctags)
+
+
 ## YCM
 
 You need to compile YCM before using it. Read the docs!
