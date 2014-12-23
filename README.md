@@ -3,6 +3,19 @@ dotfiles
 
 I use dotfiles repository to manage my dotfiles (rcfiles, ...).
 
+# Install
+
+Take vim for examle:
+
+    $ git clone https://github.com/archaicdust/dotfiles.git
+    $ ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
+    $ ln -s ~/dotfiles/vim/.vim ~/.vim
+
+Or you can use [stow](http://www.gnu.org/software/stow/manual/stow.html#Introduction) to manage the symbolic link:
+
+    $ git clone https://github.com/archaicdust/dotfiles.git
+    $ cd ~/dotfiles
+    $ stow -v vim
 
 # vim
 
