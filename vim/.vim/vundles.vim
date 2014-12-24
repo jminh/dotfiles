@@ -134,6 +134,10 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 " }}}
 
+" rst {{{
+Plugin 'Rykka/riv.vim'
+" }}}
+
 " imporvements {{{
 Plugin 'AndrewRadev/linediff.vim'
 
