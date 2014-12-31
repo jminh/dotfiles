@@ -112,6 +112,7 @@ colorscheme desert
 " http://goo.gl/9M5OYz
 try
     colorscheme molokai
+    colorscheme jellybeans
 catch
 endtry
 " for gvim
