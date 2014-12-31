@@ -46,6 +46,7 @@ Plugin 'mhinz/vim-startify'
 " colorscheme
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-vividchalk'
+Plugin 'nanotech/jellybeans.vim'
 
 " Plugin 'yonchu/accelerated-smooth-scroll'
 
