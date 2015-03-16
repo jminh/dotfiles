@@ -15,6 +15,9 @@ xmodmap ~/.Xmodmap
 xrdb ~/.Xresources
 VBoxClient-all &
 
+# start a server in the background
+emacs --daemon
+
 #export LANG=zh_TW.UTF-8
 export LANG=en_US.UTF-8
 
