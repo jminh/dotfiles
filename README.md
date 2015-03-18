@@ -8,6 +8,11 @@ I use dotfiles repository to manage my dotfiles (rcfiles, ...).
 Take vim for examle:
 
     $ git clone https://github.com/archaicdust/dotfiles.git
+    $ cd dotfiles && make vim
+
+Manual Installation
+
+    $ git clone https://github.com/archaicdust/dotfiles.git
     $ ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
     $ ln -s ~/dotfiles/vim/.vim ~/.vim
 
