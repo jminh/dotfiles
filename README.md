@@ -22,6 +22,11 @@ Or you can use [stow](http://www.gnu.org/software/stow/manual/stow.html#Introduc
     $ cd ~/dotfiles
     $ stow -v vim
 
+# zsh
+
+The code in .zprofile is used to
+**start ssh-agent on login**.
+
 # vim
 
 map key (,t) conflict
