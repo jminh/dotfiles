@@ -11,6 +11,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+/usr/bin/xscreensaver -no-splash &
+
 xmodmap ~/.Xmodmap
 xrdb ~/.Xresources
 VBoxClient-all &
