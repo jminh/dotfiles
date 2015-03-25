@@ -1,9 +1,14 @@
+
 shell bash # Tell screen your default shell
 
 startup_message off # Turn off start message
 
 altscreen on # Refresh the display when exiting programs
 
-shelltitle '$ |bash' # Dynamic window titled for running program
+hardstatus alwayslastline '%{= G}[ %{G}%H %{g}][%= %{= w}%?%-Lw%?%{= R}%n*%f %t%?%{= R}(%u)%?%{= w}%+Lw%?%= %{= g}][ %{y}Load: %l %{g}][%{B}%Y-%m-%d %{W}%c:%s %{g}]'
 
-hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %Y/%m/%d%{= .m} %0c:%s "
+# When using rxvt-unicode:
+#term rxvt-unicode-256color
+term xterm-256color
+
+# Reference https://wiki.archlinux.org/index.php/GNU_Screen
