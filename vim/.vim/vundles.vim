@@ -140,6 +140,8 @@ Plugin 'Rykka/riv.vim'
 " }}}
 
 " imporvements {{{
+" Readline style insertion (similar to Emacs key bindings)
+Plugin 'tpope/vim-rsi'
 Plugin 'AndrewRadev/linediff.vim'
 
 Plugin 'Raimondi/delimitMate'
