@@ -7,8 +7,9 @@ altscreen on # Refresh the display when exiting programs
 
 hardstatus alwayslastline '%{= G}[ %{G}%H %{g}][%= %{= w}%?%-Lw%?%{= R}%n*%f %t%?%{= R}(%u)%?%{= w}%+Lw%?%= %{= g}][ %{y}Load: %l %{g}][%{B}%Y-%m-%d %{W}%c:%s %{g}]'
 
+# Reference [GNU Screen 256 colors] https://wiki.archlinux.org/index.php/GNU_Screen
+term screen-256color
+#term xterm-256color
 # When using rxvt-unicode:
 #term rxvt-unicode-256color
-term xterm-256color
 
-# Reference https://wiki.archlinux.org/index.php/GNU_Screen
