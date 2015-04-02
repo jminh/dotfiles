@@ -55,6 +55,14 @@ export PYTHONSTARTUP=~/.pythonrc
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# 256 color
+#export TERM=xterm-256color
+if [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; then
+  export TERM=screen-256color
+else
+  export TERM=xterm-256color
+fi
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
