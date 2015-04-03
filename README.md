@@ -7,6 +7,8 @@ I use dotfiles repository to manage my dotfiles (rcfiles, ...).
 
 Take vim for examle:
 
+Use make (Makefile)
+
     $ git clone https://github.com/archaicdust/dotfiles.git
     $ cd dotfiles && make vim
 
