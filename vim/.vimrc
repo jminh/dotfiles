@@ -26,6 +26,9 @@ syntax on
     set clipboard=unnamedplus
  endif
 
+" Start searching when you type the first character of the search string
+set incsearch
+
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all
