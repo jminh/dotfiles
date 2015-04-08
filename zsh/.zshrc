@@ -57,10 +57,16 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # 256 color
 #export TERM=xterm-256color
-if [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; then
-  export TERM=screen-256color
-else
-  export TERM=xterm-256color
+# Correct the TERM variable according to terminal type (https://wiki.archlinux.org/index.php/Tmux#Correct_the_TERM_variable_according_to_terminal_type)
+# workaround for handling TERM variable in multiple tmux sessions properly from http://sourceforge.net/p/tmux/mailman/message/32751663/ by Nicholas Marriott
+if [[ -n ${TMUX} && -n ${commands[tmux]} ]];then
+        case $(tmux showenv TERM 2>/dev/null) in
+                *256color) ;&
+                TERM=fbterm)
+                        TERM=screen-256color ;;
+                *)
+                        TERM=screen
+        esac
 fi
 
 # You may need to manually set your language environment
