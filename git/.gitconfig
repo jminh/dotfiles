@@ -16,3 +16,6 @@
 	submodulesummary = 1
 [alias]
 	lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	whatsup = log --all --decorate --oneline --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+        today = !git whatsup --since="yesterday"
+	week = !git whatsup --since="1.weeks"
