@@ -98,4 +98,9 @@ fi
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
 
+case `uname` in
+  Darwin)
+    alias vim='mvim -v'
+    ;;
+esac
 
