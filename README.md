@@ -24,6 +24,10 @@ Or you can use [stow](http://www.gnu.org/software/stow/manual/stow.html#Introduc
     $ cd ~/dotfiles
     $ stow -v vim
 
+[Show](http://superuser.com/questions/71163/how-to-find-all-soft-links-symbolic-links-in-current-directory) any symbolic links in the home directory, without any child directory
+
+    $ find . -maxdepth 1 -type l -print
+
 # zsh
 
 The code in .zprofile is used to
