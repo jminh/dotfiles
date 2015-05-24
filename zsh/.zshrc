@@ -53,6 +53,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export PYTHONSTARTUP=~/.pythonrc
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.npm/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # 256 color
