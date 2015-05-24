@@ -33,6 +33,15 @@ Or you can use [stow](http://www.gnu.org/software/stow/manual/stow.html#Introduc
 The code in .zprofile is used to
 **start ssh-agent on login**.
 
+If you use zsh, you need to install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+    $ stow -v zsh
+    $ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+Change your default shell
+
+    $ chsh -s `which zsh`
+
 # vim
 
 map key (,t) conflict
