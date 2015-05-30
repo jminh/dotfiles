@@ -1,4 +1,7 @@
 
+# Instead of Control-a, make the escape/command character be Control-b # http://simpledream.net/2011/10/07/change-gnu-screen-keyboard-command/
+escape ^Bb
+
 shell bash # Tell screen your default shell
 
 startup_message off # Turn off start message
