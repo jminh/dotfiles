@@ -164,6 +164,8 @@ Plugin 'bogado/file-line'
 Plugin 'rhysd/clever-f.vim'
 " 
 Plugin 'vim-scripts/lastpos.vim'
+
+Plugin 'vim-scripts/fcitx.vim'
 " "}}}
 
 Plugin 'joonty/vdebug.git'
