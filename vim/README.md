@@ -72,3 +72,12 @@ K - Search the current word under the cursor
 
 ,b - CtrlP buffer selector
 
+# commentary
+
+gcc
+5gcc
+
+gcap
+
+gc (in visual mode)
+

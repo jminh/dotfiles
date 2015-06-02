@@ -137,6 +137,9 @@ Plugin 'plasticboy/vim-markdown'
 
 " rst {{{
 Plugin 'Rykka/riv.vim'
+
+" Program {{{
+Plugin 'tpope/vim-commentary'
 " }}}
 
 " imporvements {{{
