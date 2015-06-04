@@ -56,6 +56,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# tmux http://goo.gl/75s0hG
+DISABLE_AUTO_TITLE=true
+
 # 256 color
 #export TERM=xterm-256color
 # Correct the TERM variable according to terminal type (https://wiki.archlinux.org/index.php/Tmux#Correct_the_TERM_variable_according_to_terminal_type)
