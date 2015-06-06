@@ -140,6 +140,7 @@ Plugin 'Rykka/riv.vim'
 
 " Program {{{
 Plugin 'tpope/vim-commentary'
+Plugin 'gkz/vim-ls'
 " }}}
 
 " imporvements {{{
