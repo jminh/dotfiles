@@ -53,7 +53,6 @@ Plugin 'myusuf3/numbers.vim'
 
 Plugin 'Yggdroot/indentLine'
 " map <leader>il :IndentLinesToggle<CR>
-Plugin 'Lokaltog/vim-powerline'
 
 " Plugin 'xsunsmile/showmarks.git'
 " }}}
