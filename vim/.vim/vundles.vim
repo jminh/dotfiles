@@ -37,8 +37,6 @@ Plugin 'gmarik/Vundle.vim'
 " My Bundles here:
 "
 " original repos on github
-set laststatus=2
-let g:Powerline_symbols='unicode'
 Plugin 'FuzzyFinder'
 
 " appearance {{{
@@ -75,8 +73,6 @@ Plugin 'gregsexton/gitv'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 " }}}
-
-
 
 " Provides tab completion while inside the “/” search
 Plugin 'vim-scripts/SearchComplete'
