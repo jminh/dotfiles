@@ -116,6 +116,7 @@ Plugin 'Valloric/YouCompleteMe'
 
 " Useful for python/vim scripts
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'terryma/vim-expand-region'
 
 " Syntax checking hacks for vim
 Plugin 'scrooloose/syntastic'
