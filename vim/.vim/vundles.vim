@@ -94,6 +94,8 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'bronson/vim-visual-star-search'
 " vim bookmark
 Plugin 'MattesGroeger/vim-bookmarks'
+" mimics Ctrl-Shift-F on Sublime Text 2 (depend on ack or ag)
+Plugin 'dyng/ctrlsf.vim'
 " }}}
 
 Plugin 'vim-scripts/mru.vim'
