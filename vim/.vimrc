@@ -56,6 +56,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Why use jk http://learnvimscriptthehardway.stevelosh.com/chapters/10.html
+inoremap jk <esc> 
 
 " set cursorline cursorcolumn "Hilight current line and column
 " set nocursorline nocursorcolumn "Hilight current line and column

@@ -40,6 +40,11 @@ Install YCM from [AUR](https://wiki.archlinux.org/index.php/YouCompleteMe)
     $ yaourt vim-youcompleteme-git
 ```
 
+
+# Key binding
+
+jk - exit insert mode in Vim
+
 # vim-rooter
 
 In my current setting, I stop vim-rooter changing directory automatically.
