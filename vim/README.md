@@ -40,6 +40,14 @@ Install YCM from [AUR](https://wiki.archlinux.org/index.php/YouCompleteMe)
     $ yaourt vim-youcompleteme-git
 ```
 
+# vim-rooter
+
+In my current setting, I stop vim-rooter changing directory automatically.
+
+ack, ag, grep in the top level project dir
+
+,cd - invoke vim-rooter manually
+
 
 # Tagbar
 

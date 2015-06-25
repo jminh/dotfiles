@@ -83,7 +83,7 @@ Plugin 'osyo-manga/vim-over'
 Plugin 'mileszs/ack.vim'
 " Plugin 'petdance/ack2'
 Plugin 'rking/ag.vim'
-" vim-rooter (ack, ag, grep in the top level project dir)
+" (ack, ag, grep in the top level project dir)
 Plugin 'airblade/vim-rooter'
 Plugin 'vim-scripts/EasyGrep'
 Plugin 'Lokaltog/vim-easymotion'
