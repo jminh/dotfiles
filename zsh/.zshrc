@@ -108,3 +108,6 @@ case `uname` in
     ;;
 esac
 
+# thefuck
+alias fuck=$(thefuck $(fc -ln -1))
+
