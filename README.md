@@ -53,6 +53,14 @@ you can change it to ,T.
 
     $ vim +369 ~/.vim/bundle/TaskList.vim/plugin/tasklist.vim
 
+# tmux
+
+TPM is Tmux Plugin Manager, I use it to insatll some useful plugins.
+
+Clone [TPM](https://github.com/tmux-plugins/tpm)
+
+    $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 ## Code navigation ( ctags + autotag )
 
 ### ctags
