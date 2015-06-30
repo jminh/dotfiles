@@ -59,6 +59,15 @@ nnoremap <C-H> <C-W><C-H>
 " Why use jk http://learnvimscriptthehardway.stevelosh.com/chapters/10.html
 inoremap jk <esc> 
 
+" buffer key map https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/ {{{
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+" Close the current buffer and move to the previous one (This replicates the idea of closing a tab)
+nmap <leader>bq :bp <BAR> bd #<CR>
+" Show all open buffers and their status
+" nmap <leader>bl :ls<CR>
+" }}}
+
 " set cursorline cursorcolumn "Hilight current line and column
 " set nocursorline nocursorcolumn "Hilight current line and column
 
