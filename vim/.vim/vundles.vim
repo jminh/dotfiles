@@ -45,6 +45,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 " Plugin 'yonchu/accelerated-smooth-scroll'
 
@@ -79,6 +80,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/SearchComplete'
 
 " search {{{
+" :substitute preview
 Plugin 'osyo-manga/vim-over'
 Plugin 'mileszs/ack.vim'
 " Plugin 'petdance/ack2'
@@ -94,6 +96,7 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'bronson/vim-visual-star-search'
 " vim bookmark
 Plugin 'MattesGroeger/vim-bookmarks'
+" Plugin 'haya14busa/incsearch.vim'
 " mimics Ctrl-Shift-F on Sublime Text 2 (depend on ack or ag)
 Plugin 'dyng/ctrlsf.vim'
 " }}}
@@ -138,6 +141,7 @@ Plugin 'plasticboy/vim-markdown'
 
 " rst {{{
 Plugin 'Rykka/riv.vim'
+" }}}
 
 " Program {{{
 Plugin 'tpope/vim-commentary'
