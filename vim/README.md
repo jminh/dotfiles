@@ -94,3 +94,10 @@ gcap
 
 gc (in visual mode)
 
+
+# C++ clang-format
+
+vim-clang-format
+
+,cf formatting C++ code
+
