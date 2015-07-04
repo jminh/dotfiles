@@ -128,6 +128,7 @@ Plugin 'benmills/vimux'
 
 " C/C++ {{{
 Plugin 'vim-scripts/a.vim'
+Plugin 'rhysd/vim-clang-format'
 " }}}
 
 " markdown {{{
