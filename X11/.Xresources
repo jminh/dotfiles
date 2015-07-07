@@ -65,3 +65,12 @@ URxvt*font:xft:Inconsolata:size=14,xft:Terminus:size=16,xft:LiHei Pro:size=14:an
 URxvt*internalBorder: 1
 
 
+! Perl extension {{{
+URxvt*.perl-ext-common: selection-to-clipboard
+
+URxvt*.perl-ext-common: font-size
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+! }}}
