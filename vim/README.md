@@ -79,6 +79,9 @@ F2 - toggle NERDTree
 
 K - Search the current word under the cursor
 
+## ctrlsf
+C-F f :Search the current word
+
 # File Navigation
 
 ,t - CtrlP fuzzy file selector
