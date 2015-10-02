@@ -19,3 +19,5 @@
 	whatsup = log --all --decorate --oneline --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
         today = !git whatsup --since="yesterday"
 	week = !git whatsup --since="1.weeks"
+[commit]
+	template = ~/.git-commit-template.txt
