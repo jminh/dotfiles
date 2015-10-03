@@ -120,15 +120,15 @@ filetype indent on
 
 
 colorscheme desert
-" colorscheme vividchalk
 
 " (stackoverflow) In my .vimrc, how can I check for the existence of a color scheme?
 " http://goo.gl/9M5OYz
 try
-    colorscheme molokai
     colorscheme jellybeans
+
 catch
 endtry
+
 " for gvim
 if has('gui_running')
     set guioptions-=T  " no toolbar
@@ -138,7 +138,6 @@ if has('gui_running')
     set guifont=Ubuntu\ mono\ 12
     set guifont=Monaco\ 12
 " set background=dark
-    colorscheme elflord
     colorscheme desert
 endif
 
