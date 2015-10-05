@@ -45,6 +45,18 @@ Install YCM from [AUR](https://wiki.archlinux.org/index.php/YouCompleteMe)
 
 jk - exit insert mode in Vim
 
+# vim tmux (vimux)
+
+,vp - Prompt for a command to run
+
+,vi - Inspect the runner pane
+
+,vq - Close the runner pane
+
+,vs - Interrupt any command running in the runner pane map
+
+,vz - Zoom the runner pane
+
 # vim-rooter
 
 In my current setting, I stop vim-rooter changing directory automatically.
