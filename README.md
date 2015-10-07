@@ -7,16 +7,18 @@ I use dotfiles repository to manage my dotfiles (rcfiles, ...).
 
 Take vim for examle:
 
-Use make (Makefile)
+Way1 - Use make (Makefile)
 
     $ git clone https://github.com/archaicdust/dotfiles.git
     $ cd dotfiles && make vim
 
-Manual Installation
+Way2 - Manual Installation
 
     $ git clone https://github.com/archaicdust/dotfiles.git
     $ ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
     $ ln -s ~/dotfiles/vim/.vim ~/.vim
+
+Way3 - stow
 
 Or you can use [stow](http://www.gnu.org/software/stow/manual/stow.html#Introduction) to manage the symbolic link:
 
