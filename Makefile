@@ -21,6 +21,8 @@ zsh:
 .PHONY: git
 git:
 	ln -s $(PWD)/git/.gitconfig $(HOME)/.gitconfig
+	ln -s $(PWD)/git/.git-commit-template.txt $(HOME)/.git-commit-template.txt
+	ln -s $(PWD)/git/.tigrc $(HOME)/.tigrc
 
 .PHONY: vim
 vim:
