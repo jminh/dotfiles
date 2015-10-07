@@ -8,6 +8,8 @@ help:
 	@echo "1. make zsh"
 	@echo "2. make git"
 	@echo "3. make vim"
+	@echo "4. make tmux"
+	@echo "5. make X11"
 
 
 .PHONY: zsh 
@@ -25,3 +27,12 @@ vim:
 	ln -s $(PWD)/vim/.vimrc $(HOME)/.vimrc
 	ln -s $(PWD)/vim/.vim $(HOME)/.vim
 
+.PHONY: tmux
+tmux:
+	ln -s $(PWD)/tmux/.tmux.conf $(HOME)/.tmux.conf
+
+.PHONY: X11
+X11:
+	ln -s $(PWD)/X11/.xinitrc $(HOME)/.xinitrc
+	ln -s $(PWD)/X11/.Xresources $(HOME)/.Xresources
+	ln -s $(PWD)/X11/.Xmodmap $(HOME)/.Xresources
