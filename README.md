@@ -1,7 +1,7 @@
 dotfiles
 ==========
 
-I use dotfiles repository to manage my dotfiles (rcfiles, ...).
+I use dotfiles (a git repository) to manage my dotfiles (rcfiles, ...).
 
 # Install
 
