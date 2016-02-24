@@ -1,0 +1,5 @@
+# Babun
+# https://github.com/babun/babun
+
+# Uncomment this to disable daily auto-update & proxy checks on startup (not recommended!)
+export DISABLE_CHECK_ON_STARTUP="true"
