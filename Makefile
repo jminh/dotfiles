@@ -33,6 +33,11 @@ vim:
 tmux:
 	ln -s $(PWD)/tmux/.tmux.conf $(HOME)/.tmux.conf
 
+.PHONY: babun
+tmux:
+	ln -s $(PWD)/babun/.babunrc $(HOME)/.babunrc
+	ln -s $(PWD)/babun/.minttyrc $(HOME)/.minttyrc
+
 .PHONY: X11
 X11:
 	ln -s $(PWD)/X11/.xinitrc $(HOME)/.xinitrc
