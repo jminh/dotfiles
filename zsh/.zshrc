@@ -46,7 +46,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vundle tmux tmuxinator sprunge)
+plugins=(git vundle tmux tmuxinator sprunge brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,7 +107,4 @@ case `uname` in
     alias vim='mvim -v'
     ;;
 esac
-
-# thefuck
-alias fuck=$(thefuck $(fc -ln -1))
 
