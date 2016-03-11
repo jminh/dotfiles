@@ -29,6 +29,10 @@ vim:
 	ln -s $(PWD)/vim/.vimrc $(HOME)/.vimrc
 	ln -s $(PWD)/vim/.vim $(HOME)/.vim
 
+.PHONY: spacemacs
+spacemacs:
+	ln -s $(PWD)/spacemacs/.spacemacs $(HOME)/.spacemacs
+
 .PHONY: tmux
 tmux:
 	ln -s $(PWD)/tmux/.tmux.conf $(HOME)/.tmux.conf
