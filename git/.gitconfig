@@ -14,6 +14,7 @@
 	submodule = log
 [status]
 	submodulesummary = 1
+	showuntrackedfiles = no
 [alias]
 	lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	whatsup = log --all --decorate --oneline --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
