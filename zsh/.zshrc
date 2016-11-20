@@ -54,6 +54,7 @@ source $ZSH/oh-my-zsh.sh
 export PYTHONSTARTUP=~/.pythonrc
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
+export PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH" # mac GnuPG 1.x
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # tmux http://goo.gl/75s0hG
