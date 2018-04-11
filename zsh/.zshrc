@@ -103,6 +103,8 @@ fi
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
 
+alias tb="nc termbin.com 9999"
+
 case `uname` in
   Darwin)
     alias vim='mvim -v'
