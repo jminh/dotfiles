@@ -120,6 +120,12 @@ Plug 'rhysd/vim-clang-format'
 "Plugin 'steffanc/cscopemaps.vim'
 " }}}
 
+" {{{ gtags
+Plug 'skywind3000/vim-preview'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/gutentags_plus'
+" }}}
+
 " markdown {{{
 "Plugin 'godlygeek/tabular'
 "Plugin 'plasticboy/vim-markdown'
