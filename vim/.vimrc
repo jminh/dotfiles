@@ -119,14 +119,13 @@ filetype indent on
 " let g:pydiction_menu_height = 20
 
 
-colorscheme desert
-
 " (stackoverflow) In my .vimrc, how can I check for the existence of a color scheme?
 " http://goo.gl/9M5OYz
 try
-    colorscheme jellybeans
-
+    colorscheme peaksea
+    set background=dark
 catch
+    colorscheme desert
 endtry
 
 " for gvim
