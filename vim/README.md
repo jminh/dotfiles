@@ -1,6 +1,8 @@
 
 # gtags
 
+See custom_setting/vim-gutentags.vim
+
 ```
 " config project root markers.
 let g:gutentags_project_root = ['.root']
