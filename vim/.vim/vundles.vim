@@ -17,6 +17,8 @@ call plug#begin('~/.vim/plugged')
 " original repos on github
 "Plugin 'FuzzyFinder'
 
+Plug 'liuchengxu/vim-which-key'
+
 " appearance {{{
 Plug 'mhinz/vim-startify'
 " colorscheme
