@@ -62,6 +62,9 @@ Plug 'mhinz/vim-signify'
 "Plugin 'vim-scripts/SearchComplete'
 
 " search {{{
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " :substitute preview
 "Plugin 'osyo-manga/vim-over'
 "Plugin 'mileszs/ack.vim'
