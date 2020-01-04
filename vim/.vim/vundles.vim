@@ -65,6 +65,11 @@ Plug 'mhinz/vim-signify'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" need python3 support
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+let g:Lf_PreviewInPopup = 1
+let g:Lf_WindowPosition = 'popup'
+
 " :substitute preview
 "Plugin 'osyo-manga/vim-over'
 "Plugin 'mileszs/ack.vim'
