@@ -1,4 +1,19 @@
 
+# gtags
+
+```
+" config project root markers.
+let g:gutentags_project_root = ['.root']
+```
+
+# signify-mappings
+
+    ]c   Jump to the next hunk.
+    [c   Jump to the previous hunk.
+
+    ]C   Jump to the last hunk.
+    [C   Jump to the first hunk.
+
 # YouCompleteMe
 
 You need to compile YCM before using it. Read the docs!
@@ -45,18 +60,6 @@ Install YCM from [AUR](https://wiki.archlinux.org/index.php/YouCompleteMe)
 
 jk - exit insert mode in Vim
 
-# vim tmux (vimux)
-
-,vp - Prompt for a command to run
-
-,vi - Inspect the runner pane
-
-,vq - Close the runner pane
-
-,vs - Interrupt any command running in the runner pane map
-
-,vz - Zoom the runner pane
-
 # vim-rooter
 
 In my current setting, I stop vim-rooter changing directory automatically.
@@ -69,6 +72,37 @@ ack, ag, grep in the top level project dir
 # Tagbar
 
 ,tt - toggle Tagbar
+
+## ctrlsf
+C-F f :Search the current word
+
+# commentary
+
+gcc
+5gcc
+
+gcap
+
+gc (in visual mode)
+
+
+# C++ clang-format
+
+vim-clang-format
+
+,cf formatting C++ code
+
+# deprecated
+
+## Search
+
+K - Search the current word under the cursor
+
+## File Navigation
+
+,t - CtrlP fuzzy file selector
+
+,b - CtrlP buffer selector
 
 # NERDTree
 
@@ -87,32 +121,16 @@ F2 - toggle NERDTree
 ,,f
 ,,F
 
-# Search
+## vim tmux (vimux)
 
-K - Search the current word under the cursor
+,vp - Prompt for a command to run
 
-## ctrlsf
-C-F f :Search the current word
+,vi - Inspect the runner pane
 
-# File Navigation
+,vq - Close the runner pane
 
-,t - CtrlP fuzzy file selector
+,vs - Interrupt any command running in the runner pane map
 
-,b - CtrlP buffer selector
+,vz - Zoom the runner pane
 
-# commentary
-
-gcc
-5gcc
-
-gcap
-
-gc (in visual mode)
-
-
-# C++ clang-format
-
-vim-clang-format
-
-,cf formatting C++ code
 
