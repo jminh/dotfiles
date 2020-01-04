@@ -153,7 +153,7 @@ Plug 'Raimondi/delimitMate'
 " It requires Vim 7.3.885 or above and "if_lua" enabled Vim.
 " Plugin 'Shougo/neocomplete.vim'
 
-Plug 'vim-scripts/Mark'
+Plug 'lfv89/vim-interestingwords'
 " Plugin 'vim-scripts/Mark--Karkat'
 
 " use multiple cursors like Sublime Text editor.
