@@ -112,8 +112,21 @@ Plug 'vim-scripts/pythoncomplete'
 "Plugin 'michaeljsmith/vim-indent-object'
 "Plugin 'terryma/vim-expand-region'
 
+" syntax {{{
+Plug 'w0rp/ale'
+let g:ale_sign_column_always = 1
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %{ALEGetStatusLine()}
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+
+let g:ale_linters = {
+            \   'c++': ['clang'],
+            \   'c': ['clang'],
+            \}
+
 " Syntax checking hacks for vim
 "Plugin 'scrooloose/syntastic'
+" }}}
 
 " Plugin 'vim-scripts/Conque-Shell'
 "Plugin 'acx0/Conque-Shell'
