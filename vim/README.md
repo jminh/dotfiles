@@ -18,11 +18,20 @@ let g:gutentags_project_root = ['.root']
 
 # LSP
 
-Small working example
-
 ```
 :call LanguageClient#textDocument_definition()
 ```
+
+code index location
+
+ccls
+  ./.ccls-cache
+clangd
+  ./.clangd/index
+cquery
+   defined in cacheDirectory
+
+Small working example
 
 ccls
 ```
