@@ -16,6 +16,51 @@ let g:gutentags_project_root = ['.root']
     ]C   Jump to the last hunk.
     [C   Jump to the first hunk.
 
+# LSP
+
+Small working example
+
+```
+:call LanguageClient#textDocument_definition()
+```
+
+ccls
+```
+let g:LanguageClient_serverCommands = {
+       \ 'c': ['/usr/local/bin/ccls', '--init={"index": {"threads": 2}, "cacheFormat": "json"}'],
+       \ 'cpp': ['/usr/local/bin/ccls', '--init={"index": {"threads": 2}, "cacheFormat": "json"}'],
+       \ }
+```
+
+clangd
+```
+let g:LanguageClient_serverCommands = {
+  \ 'cpp': ['/usr/local/opt/llvm/bin/clangd'],
+  \ 'c': ['/usr/local/opt/llvm/bin/clangd'],
+  \ }
+```
+
+cquery
+```
+let g:LanguageClient_serverCommands = {
+ \ 'c': ['/usr/local/bin/cquery',
+ \ '--log-file=/tmp/cq.log',
+ \ '--init={"cacheDirectory":"/Users/ming/.cquery/cache"}'],
+ \ 'cpp': ['/usr/local/bin/cquery',
+ \ '--log-file=/tmp/cq.log',
+ \ '--init={"cacheDirectory":"/Users/ming/.cquery/cache"}']
+ \ }
+```
+
+For cquery,
+(   0.022s) [querydb      ]     initialize.cc:536   | cacheDirectory cannot be empty.
+
+```
+src/config.h
+`initialize` request to the cquery language server. The only required option is
+`cacheDirectory`, which is where index files will be stored.
+```
+
 # YouCompleteMe
 
 You need to compile YCM before using it. Read the docs!
