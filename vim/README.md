@@ -24,11 +24,11 @@ let g:gutentags_project_root = ['.root']
 
 code index location
 
-ccls
+- ccls
   ./.ccls-cache
-clangd
+- clangd
   ./.clangd/index
-cquery
+- cquery
    defined in cacheDirectory
 
 Small working example
@@ -69,6 +69,10 @@ src/config.h
 `initialize` request to the cquery language server. The only required option is
 `cacheDirectory`, which is where index files will be stored.
 ```
+
+Make sure language server could be started when invoked manually from shell.
+Also try use absolute path for server commands,
+as PATH in vim might be different from shell env, especially on macOS.
 
 # YouCompleteMe
 
