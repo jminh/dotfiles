@@ -152,6 +152,16 @@ vim-clang-format
 
 ,cf formatting C++ code
 
+# profile vim
+
+```
+:StartupTime 20
+```
+
+has, system is slow
+
+Reduce the use of has() or system()
+
 # deprecated
 
 ## Search
