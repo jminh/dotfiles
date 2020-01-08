@@ -8,6 +8,25 @@ See custom_setting/vim-gutentags.vim
 let g:gutentags_project_root = ['.root']
 ```
 
+emacs also comes with ctags
+
+For example:
+  /opt/emacs-25.1/bin/ctags
+  /opt/emacs-25.1/bin/emacs
+
+```
+export PATH /opt/emacs-25.1/bin:$PATH
+```
+
+But emacs's ctags which is not working with vim-gutentags.vim.
+
+You need something like
+
+```
+export PATH /opt/emacs-25.1/bin:$PATH
+export PATH /opt/ctags-5.8/bin:$PATH
+```
+
 # signify-mappings
 
     ]c   Jump to the next hunk.
