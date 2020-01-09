@@ -35,6 +35,29 @@ export PATH /opt/ctags-5.8/bin:$PATH
     ]C   Jump to the last hunk.
     [C   Jump to the first hunk.
 
+# LSP coc
+
+nodejs >= 8.10.0
+vim >= 8.0.1453
+
+config
+.vim/coc-settings.json
+
+```
+{
+"languageserver": {
+  "cquery": {
+      "command": "/usr/local/bin/cquery",
+      "args": ["--log-file=/tmp/cq.log"],
+      "filetypes": ["c", "cpp"],
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "initializationOptions": {
+            "cacheDirectory": "/Users/ming/.cquery/cache"
+          }
+    }
+}}
+```
+
 # LSP
 
 ```

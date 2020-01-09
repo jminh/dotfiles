@@ -134,33 +134,42 @@ let g:ale_linters = {
 "Plugin 'benmills/vimux'
 
 " LSP {{{
-Plug 'autozimu/LanguageClient-neovim', {
- \ 'branch': 'next',
- \ 'do': 'bash install.sh',
- \ }
+"Plug 'autozimu/LanguageClient-neovim', {
+" \ 'branch': 'next',
+" \ 'do': 'bash install.sh',
+" \ }
+"
+"let g:LanguageClient_serverCommands = {
+"       \ 'c': ['/usr/local/bin/ccls', '--init={"index": {"threads": 2}, "cacheFormat": "json"}'],
+"       \ 'cpp': ['/usr/local/bin/ccls', '--init={"index": {"threads": 2}, "cacheFormat": "json"}'],
+"       \ }
+"
+"function SetLSPShortcuts()
+"  nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
+"  nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
+"  nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
+"  nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
+"  nnoremap <leader>lx :call LanguageClient#textDocument_references()<CR>
+"  nnoremap <leader>la :call LanguageClient_workspace_applyEdit()<CR>
+"  nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
+"  nnoremap <leader>lh :call LanguageClient#textDocument_hover()<CR>
+"  nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
+"  nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
+"endfunction()
+"
+"augroup LSP
+"  autocmd!
+"  autocmd FileType cpp,c call SetLSPShortcuts()
+"augroup END
 
-let g:LanguageClient_serverCommands = {
-       \ 'c': ['/usr/local/bin/ccls', '--init={"index": {"threads": 2}, "cacheFormat": "json"}'],
-       \ 'cpp': ['/usr/local/bin/ccls', '--init={"index": {"threads": 2}, "cacheFormat": "json"}'],
-       \ }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+set signcolumn=yes
 
-function SetLSPShortcuts()
-  nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
-  nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
-  nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
-  nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
-  nnoremap <leader>lx :call LanguageClient#textDocument_references()<CR>
-  nnoremap <leader>la :call LanguageClient_workspace_applyEdit()<CR>
-  nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
-  nnoremap <leader>lh :call LanguageClient#textDocument_hover()<CR>
-  nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
-  nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
-endfunction()
-
-augroup LSP
-  autocmd!
-  autocmd FileType cpp,c call SetLSPShortcuts()
-augroup END
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 " }}}
 
 " C/C++ {{{
