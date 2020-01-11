@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
 " original repos on github
 "Plugin 'FuzzyFinder'
 
+Plug 'tweekmonster/startuptime.vim'
 Plug 'liuchengxu/vim-which-key'
 
 " appearance {{{
@@ -24,7 +25,9 @@ Plug 'mhinz/vim-startify'
 " colorscheme
 "Plugin 'tomasr/molokai'
 "Plugin 'tpope/vim-vividchalk'
-"Plugin 'nanotech/jellybeans.vim'
+Plug 'sjl/badwolf'
+Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
 Plug 'vim-scripts/peaksea'
 "Plugin 'altercation/vim-colors-solarized'
 
@@ -81,7 +84,8 @@ Plug 'rking/ag.vim'
 "Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'justinmk/vim-sneak'
 " Plugin 'unblevable/quick-scope'
-Plug 'vim-scripts/IndexedSearch'
+"Plug 'vim-scripts/IndexedSearch'
+set shortmess-=S
 
 " usage: https://github.com/bronson/vim-visual-star-search
 Plug 'bronson/vim-visual-star-search'
@@ -107,6 +111,7 @@ Plug 'vim-scripts/pythoncomplete'
 
 " YouCompleteMe
 " Plugin 'Valloric/YouCompleteMe'
+Plug 'zxqfl/tabnine-vim'
 
 " Useful for python/vim scripts
 "Plugin 'michaeljsmith/vim-indent-object'
@@ -220,7 +225,10 @@ Plug 'Raimondi/delimitMate'
 " It requires Vim 7.3.885 or above and "if_lua" enabled Vim.
 " Plugin 'Shougo/neocomplete.vim'
 
-Plug 'lfv89/vim-interestingwords'
+"Plug 'lfv89/vim-interestingwords'
+"Plug 'vim-scripts/Mark'
+"Plug 'inkarkat/vim-mark'
+
 " Plugin 'vim-scripts/Mark--Karkat'
 
 " use multiple cursors like Sublime Text editor.
