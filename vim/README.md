@@ -1,4 +1,31 @@
 
+# vim-signify
+
+The master branch is async-only (at least Vim 8.0.902)
+
+```
+" default updatetime 4000ms is not good for async update
+set updatetime=100
+```
+
+```
+vim
+echo has('patch-8.0.902')
+```
+
+:SignifyDiff[!]
+
+Open a new tab with two windows using |diff-mode| to show the differences
+between the current file and its version that was last checked in.
+
+With [!], no new tab will be opened.
+
+    ]c   Jump to the next hunk.
+    [c   Jump to the previous hunk.
+
+    ]C   Jump to the last hunk.
+    [C   Jump to the first hunk.
+
 # gtags
 
 See custom_setting/vim-gutentags.vim
@@ -26,14 +53,6 @@ You need something like
 export PATH /opt/emacs-25.1/bin:$PATH
 export PATH /opt/ctags-5.8/bin:$PATH
 ```
-
-# signify-mappings
-
-    ]c   Jump to the next hunk.
-    [c   Jump to the previous hunk.
-
-    ]C   Jump to the last hunk.
-    [C   Jump to the first hunk.
 
 # LSP coc
 
