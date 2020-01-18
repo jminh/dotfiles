@@ -60,6 +60,8 @@ config
 
 :CocInfo
 
+:CocOpenLog
+
 :CocLocalConfig
 
 :CocConfig
@@ -88,6 +90,17 @@ Use python.pythonPath
 }
 ```
 
+Note: you need to install jedi in your environment.
+
+```
+pip install jedi --upgrade
+
+If your jedi is too old, you will see
+
+:CocOpenLog
+RuntimeError: Jedi version 0.10.2 too old, requires >= 0.13.0
+```
+
 If you want Microsoft Python language server, use following
 
 ```
@@ -95,6 +108,10 @@ If you want Microsoft Python language server, use following
    "python.jediEnabled":false
 }
 ```
+
+The problem of Microsoft Python languageserver server now is:
+MPLS using too much memory and CPU.
+It's bug of MPLS, checkout https://github.com/Microsoft/python-language-server/issues/832.
 
 # LSP
 
