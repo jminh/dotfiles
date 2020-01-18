@@ -58,6 +58,12 @@ config
 }}
 ```
 
+:CocInfo
+
+:CocLocalConfig
+
+:CocConfig
+
 # LSP
 
 ```
