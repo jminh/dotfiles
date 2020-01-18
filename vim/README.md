@@ -40,6 +40,13 @@ export PATH /opt/ctags-5.8/bin:$PATH
 nodejs >= 8.10.0
 vim >= 8.0.1453
 
+Install nodejs before using :PlugInstll.
+
+Otherwise you have to
+1. remove coc.nvim with :PlugClean
+1. install nodejs
+3. install coc.nvim with :PlugInstll
+
 config
 .vim/coc-settings.json
 
