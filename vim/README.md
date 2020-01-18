@@ -272,6 +272,34 @@ Leaderf jump between functions
 
 Note !.
 
+# UltiSnip
+
+Trigger configuration. Tab
+let g:UltiSnipsExpandTrigger="<tab>"
+
+g:UltiSnipsJumpForwardTrigger
+<c-j>
+
+g:UltiSnipsJumpBackwardTrigger
+<c-k>
+
+- C++ snippets
+  https://github.com/honza/vim-snippets/blob/master/snippets/cpp.snippets
+- C snippets
+  https://github.com/honza/vim-snippets/blob/master/snippets/c.snippets
+- python snippets
+  https://github.com/honza/vim-snippets/blob/master/snippets/python.snippets
+- TCL snippets
+  https://github.com/honza/vim-snippets/blob/master/snippets/tcl.snippets
+- verilog
+  https://github.com/honza/vim-snippets/blob/master/snippets/verilog.snippets
+- system verilog
+  https://github.com/honza/vim-snippets/blob/master/snippets/systemverilog.snippets
+- sql
+  https://github.com/honza/vim-snippets/blob/master/snippets/sql.snippets
+- sh
+  https://github.com/honza/vim-snippets/blob/master/snippets/sh.snippets
+
 # Key binding
 
 jk - exit insert mode in Vim
