@@ -72,6 +72,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 let g:Lf_PreviewInPopup = 1
 let g:Lf_WindowPosition = 'popup'
+let g:Lf_ShortcutB = ''
+    " Default value is '<leader>b'.
 
 " :substitute preview
 "Plugin 'osyo-manga/vim-over'
