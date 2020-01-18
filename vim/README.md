@@ -101,6 +101,7 @@ Note: you need to install jedi in your environment.
 
 ```
 pip install jedi --upgrade
+pip install jedi --upgrade --user
 
 If your jedi is too old, you will see
 
