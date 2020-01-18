@@ -372,6 +372,18 @@ ack, ag, grep in the top level project dir
 
 ,tt - toggle Tagbar
 
+# Mark
+
+,m - mark or unmark the word under (or before) the cursor
+
+https://github.com/vim-scripts/Mark
+mark.vim should be re-sourced after any changing to colors. For example, if you
+:set background=dark  OR
+:colorscheme default
+you should
+:source PATH_OF_PLUGINS/mark.vim
+after that. Otherwise, you won't see the colors.
+
 ## ctrlsf
 C-F f :Search the current word
 
