@@ -92,6 +92,8 @@ config
 
 :CocConfig
 
+:CocInstall -sync coc-python
+
 Python, conda, use Jedi
 
 Use python.pythonPath
