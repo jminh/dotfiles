@@ -49,3 +49,9 @@ let g:which_key_map['w'] = {
 autocmd VimEnter * call which_key#register(',', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey ','<CR>
 vnoremap <silent> <leader> :<c-u>WhichKey ','<CR>
+
+" call the guide for keys other than leader
+let g:maplocalleader = "\<Space>"
+nnoremap <localleader> :<c-u>WhichKey  ','<CR>
+vnoremap <localleader> :<c-u>WhichKeyVisual  ','<CR>
+" https://www.reddit.com/r/vim/comments/4ks9le/do_you_use_localleader_if_yes_how/
