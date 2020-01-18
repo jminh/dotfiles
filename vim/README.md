@@ -64,6 +64,38 @@ config
 
 :CocConfig
 
+Python, conda, use Jedi
+
+Use python.pythonPath
+
+```
+{
+   "python.pythonPath":"/Users/ming/miniconda2/bin/python",
+   "languageserver":{
+      "bash":{
+         "command":"bash-language-server",
+         "args":[
+            "start"
+         ],
+         "filetypes":[
+            "sh"
+         ],
+         "ignoredRootPaths":[
+            "~"
+         ]
+      }
+   }
+}
+```
+
+If you want Microsoft Python language server, use following
+
+```
+{
+   "python.jediEnabled":false
+}
+```
+
 # LSP
 
 ```
