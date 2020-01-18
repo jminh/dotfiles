@@ -214,6 +214,10 @@ Install YCM from [AUR](https://wiki.archlinux.org/index.php/YouCompleteMe)
 
 # ALE
 
++ Makefile: https://github.com/mrtazz/checkmake
++ bash: shellcheck https://github.com/koalaman/shellcheck#installing
++ tcl: nagelfar
+
 :ALEInfo
 
 :ALEDisable
@@ -231,8 +235,6 @@ let g:ale_linters = {
 ```
 
 clangd reads compile_commands.json. clang seems not reads compile_commands.json.
-
-+ Makefile: https://github.com/mrtazz/checkmake
 
 Example :ALEInfo
 
