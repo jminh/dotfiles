@@ -157,6 +157,52 @@ Install YCM from [AUR](https://wiki.archlinux.org/index.php/YouCompleteMe)
     $ yaourt vim-youcompleteme-git
 ```
 
+# ALE
+
+:ALEInfo
+
+:ALEDisable
+
+:ALEEnable
+
+Linter example
+```
+let g:ale_linters = {
+            \   'cpp': ['clangd', 'clang'],
+            \   'c': ['clangd', 'clang'],
+            \   'verilog': ['verilator'],
+            \   'sh': ['shellcheck', 'language_server'],
+            \}
+```
+
++ Makefile: https://github.com/mrtazz/checkmake
+
+Example :ALEInfo
+
+```
+Current Filetype: tcl
+Available Linters: ['nagelfar']
+  Enabled Linters: ['nagelfar']
+ Suggested Fixers:
+  'remove_trailing_lines' - Remove all blank lines at the end of a file.
+  'trim_whitespace' - Remove all trailing whitespace characters at the end of every line.
+ Linter Variables:
+let g:ale_tcl_nagelfar_executable = 'nagelfar.tcl'
+```
+
+```
+http://nagelfar.sourceforge.net/
+https://sourceforge.net/projects/nagelfar/files/
+Rel_131
+nagelfar131.linux.gz 2019-08-22
+
+Files in 1.3.1 release:
+nagelfar131.tar.gz is the complete distribution.
+```
+
+Take tcl for example, download nagelfar131.linux.gz.
+
+Extract the gz file you will see nagelfar131.linux. Rename it to nagelfar and put it in $PATH.
 
 # Key binding
 
