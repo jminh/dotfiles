@@ -290,6 +290,32 @@ Take tcl for example, download nagelfar131.linux.gz.
 
 Extract the gz file you will see nagelfar131.linux. Rename it to nagelfar and put it in $PATH.
 
+# FZF
+
+https://github.com/junegunn/fzf.vim
+
+:Rg [PATTERN] rg search result (ALT-A to select all, ALT-D to deselect all)
+
+quickfix
+
+:BLines
+  Lines in the current buffer
+
+:Files
+  Lines in loaded buffers
+
+:Lines
+
+:Snippets
+  UltiSnips
+
+:Windows
+
+:Marks
+
+:History:
+  vim command history
+
 # LeaderF
 
 Leaderf jump between functions
