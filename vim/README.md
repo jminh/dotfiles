@@ -210,6 +210,15 @@ Take tcl for example, download nagelfar131.linux.gz.
 
 Extract the gz file you will see nagelfar131.linux. Rename it to nagelfar and put it in $PATH.
 
+# LeaderF
+
+Leaderf jump between functions
+
+:Leaderf function
+:Leaderf! function
+
+Note !.
+
 # Key binding
 
 jk - exit insert mode in Vim
