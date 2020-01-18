@@ -181,6 +181,8 @@ let g:ale_linters = {
             \}
 ```
 
+clangd reads compile_commands.json. clang seems not reads compile_commands.json.
+
 + Makefile: https://github.com/mrtazz/checkmake
 
 Example :ALEInfo
