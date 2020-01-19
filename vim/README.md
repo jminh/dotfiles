@@ -1,4 +1,8 @@
 
+# which-key
+
+:WhichKey(',')
+
 # vim-signify
 
 The master branch is async-only (at least Vim 8.0.902)
@@ -407,6 +411,8 @@ vim-clang-format
 
 ```
 :StartupTime 20
+
+Total Time:  139.669 -- Flawless Victory
 ```
 
 has, system is slow
