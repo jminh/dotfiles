@@ -162,6 +162,10 @@ code index location
 - cquery
    defined in cacheDirectory
 
+clangd
+  The index is saved to the .clangd/index in the project root;
+  index shards for common headers e.g. STL will be stored in $HOME/.clangd/index;
+
 Small working example
 
 ccls
