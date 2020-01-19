@@ -97,6 +97,7 @@ config
 :CocConfig
 
 :CocInstall -sync coc-python
+:CocInstall -sync coc-tabnine
 
 Python, conda, use Jedi
 
@@ -295,6 +296,18 @@ nagelfar131.tar.gz is the complete distribution.
 Take tcl for example, download nagelfar131.linux.gz.
 
 Extract the gz file you will see nagelfar131.linux. Rename it to nagelfar and put it in $PATH.
+
+# TabNine
+
+zxqfl/TabNine
+Is the index stored only in memory or persisted to disk? #46
+https://github.com/zxqfl/TabNine/issues/46
+
+You can check its version by typing folliwng string in the buffer
+
+```
+TabNine::version
+```
 
 # FZF
 
