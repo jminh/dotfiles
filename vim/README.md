@@ -477,4 +477,39 @@ F2 - toggle NERDTree
 
 ,vz - Zoom the runner pane
 
+# compile vim 8.2
 
+Some plugins require new vim and some need python support. You may need to compile a new one to suit your case.
+
+gcc
+```
+gcc --version
+gcc (GCC) 7.3.0
+
+g++ --version
+g++ (GCC) 7.3.0
+```
+
+```
+git clone https://github.com/vim/vim.git
+cd vim
+make distclean
+./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-rubyinterp=yes \
+            --enable-python3interp=yes \
+            --with-python3-command=/opt/bin/python \
+            --enable-perlinterp=yes \
+            --enable-luainterp=yes \
+            --enable-gui=gtk2 \
+            --enable-cscope \
+            --prefix=/u/ming/bin/vim8_2
+make VIMRUNTIMEDIR=/u/ming/bin/vim8_2/share/vim/vim82 -j10
+make install
+```
+
+Note: Do not use conda python. Otherwise you need to be in a conda env to use vim.
+
+Ref:
+(1) https://vi.stackexchange.com/questions/17433/requires-vim-compiled-with-python-2-7-1-or-3-4-support
+(2) https://github.com/ycm-core/YouCompleteMe/wiki/Building-Vim-from-source
