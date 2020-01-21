@@ -4,6 +4,9 @@ set statusline+=%{gutentags#statusline()}
 
 let g:gutentags_define_advanced_commands = 1
 
+" change focus to quickfix window after search (optional).
+let g:gutentags_plus_switch = 1
+
 " enable gtags module
 let g:gutentags_modules = ['ctags', 'gtags_cscope']
 
