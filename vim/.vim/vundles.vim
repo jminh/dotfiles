@@ -98,7 +98,7 @@ Plug 'bronson/vim-visual-star-search'
 Plug 'MattesGroeger/vim-bookmarks'
 " Plugin 'haya14busa/incsearch.vim'
 " mimics Ctrl-Shift-F on Sublime Text 2 (depend on ack or ag)
-Plug 'dyng/ctrlsf.vim'
+Plug 'dyng/ctrlsf.vim' " slow Plug
 " }}}
 
 "Plugin 'vim-scripts/mru.vim'
@@ -226,7 +226,7 @@ Plug 'tpope/vim-commentary'
 "Plugin 'tpope/vim-rsi'
 "Plugin 'AndrewRadev/linediff.vim'
 
-Plug 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate' " slow Plug
 " It requires Vim 7.3.885 or above and "if_lua" enabled Vim.
 " Plugin 'Shougo/neocomplete.vim'
 
