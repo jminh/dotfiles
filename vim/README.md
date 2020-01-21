@@ -348,6 +348,21 @@ Leaderf jump between functions
 
 Note !.
 
+# Preview
+
+skywind3000/vim-preview
+
+quickfix
+
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+
+:Leaderf command
+:Commands (FZF)
+
+:PreviewScroll 1
+:PreviewScroll -1
+
 # UltiSnip
 
 Trigger configuration. Tab
