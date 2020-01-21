@@ -96,6 +96,7 @@ Plug 'rking/ag.vim'
 Plug 'justinmk/vim-sneak'
   let g:sneak#label = 1
 " Plugin 'unblevable/quick-scope'
+"Plug 'google/vim-searchindex'
 "Plug 'vim-scripts/IndexedSearch'
   " did not work well with interestingwords
   " it will not automaticlly show 2nd 3rd ... match
