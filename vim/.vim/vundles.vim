@@ -154,6 +154,11 @@ let g:ale_linters = {
 
 "Plugin 'benmills/vimux'
 
+" code snippet {{{
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+"}}}
+
 " LSP {{{
 "Plug 'autozimu/LanguageClient-neovim', {
 " \ 'branch': 'next',
