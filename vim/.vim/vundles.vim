@@ -127,6 +127,7 @@ Plug 'vim-scripts/pythoncomplete'
 " YouCompleteMe
 " Plugin 'Valloric/YouCompleteMe'
 "Plug 'zxqfl/tabnine-vim'
+  " Add a file named .tabnine_root to the root of your project directory.
 
 " Useful for python/vim scripts
 "Plugin 'michaeljsmith/vim-indent-object'
