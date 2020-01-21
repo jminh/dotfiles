@@ -42,7 +42,13 @@ Plug 'vim-scripts/peaksea'
 Plug 'Yggdroot/indentLine'
 " map <leader>il :IndentLinesToggle<CR>
 " Plugin 'Lokaltog/vim-powerline'
-Plug 'bling/vim-airline'
+"Plug 'bling/vim-airline' "slow Plug slow slow use vim-neatstatus instead
+Plug 'ap/vim-buftabline'
+  " vim-buftabline README
+  " If you do not already use Airline, you may not want to: it is far heavier
+  " than Buftabline, to the point of dragging down performance. C.f. Pretty
+  " statuslines vs cursor speed
+Plug 'maciakl/vim-neatstatus'
 
 " Plugin 'xsunsmile/showmarks.git'
 " }}}
