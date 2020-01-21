@@ -116,7 +116,7 @@ Plug 'vim-scripts/pythoncomplete'
 
 " YouCompleteMe
 " Plugin 'Valloric/YouCompleteMe'
-Plug 'zxqfl/tabnine-vim'
+"Plug 'zxqfl/tabnine-vim'
 
 " Useful for python/vim scripts
 "Plugin 'michaeljsmith/vim-indent-object'
