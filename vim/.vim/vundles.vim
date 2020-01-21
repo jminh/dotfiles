@@ -133,6 +133,7 @@ let g:ale_linters = {
             \   'c++': ['clang'],
             \   'c': ['clang'],
             \}
+"let g:ale_linters_explicit = 1
 
 " Syntax checking hacks for vim
 "Plugin 'scrooloose/syntastic'
