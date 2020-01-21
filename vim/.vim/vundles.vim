@@ -90,6 +90,9 @@ Plug 'rking/ag.vim'
 "Plugin 'justinmk/vim-sneak'
 " Plugin 'unblevable/quick-scope'
 "Plug 'vim-scripts/IndexedSearch'
+  " did not work well with interestingwords
+  " it will not automaticlly show 2nd 3rd ... match
+  " we need do manual command
 set shortmess-=S
 
 " usage: https://github.com/bronson/vim-visual-star-search
