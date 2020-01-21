@@ -87,7 +87,8 @@ Plug 'rking/ag.vim'
 "Plugin 'airblade/vim-rooter'
 "Plugin 'vim-scripts/EasyGrep'
 "Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'justinmk/vim-sneak'
+Plug 'justinmk/vim-sneak'
+  let g:sneak#label = 1
 " Plugin 'unblevable/quick-scope'
 "Plug 'vim-scripts/IndexedSearch'
   " did not work well with interestingwords
