@@ -100,6 +100,7 @@ Plug 'justinmk/vim-sneak'
   " did not work well with interestingwords
   " it will not automaticlly show 2nd 3rd ... match
   " we need do manual command
+  " it works well with vim-scripts/Mark
 set shortmess-=S
 
 " usage: https://github.com/bronson/vim-visual-star-search
