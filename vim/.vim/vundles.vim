@@ -242,6 +242,7 @@ Plug 'Raimondi/delimitMate'
 "Plugin 'craigemery/vim-autotag'
 "Plugin 'chrisbra/NrrwRgn'
 "Plugin 'sjl/gundo.vim'
+Plug 'simnalamburt/vim-mundo'
 "Plugin 'mbbill/undotree'
 "Plugin 'goldfeld/ctrlr.vim'
 
