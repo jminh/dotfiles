@@ -451,6 +451,9 @@ has, system is slow
 
 Reduce the use of has() or system()
 
+alternative
+bchretien/vim-profiler https://github.com/bchretien/vim-profiler
+
 # deprecated
 
 ## Search
