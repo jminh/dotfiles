@@ -118,6 +118,14 @@ This feature can consume a lot of CPU. It can be disabled using the --background
 }}
 ```
 
+If you want to store it in the project.
+
+```
+      "initializationOptions": {
+            "cacheDirectory": ".cquery/cache"
+          }
+```
+
 :CocInfo
 
 :CocOpenLog
