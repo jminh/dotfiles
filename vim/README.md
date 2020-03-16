@@ -75,6 +75,36 @@ config
 
 ```
 {
+  "languageserver": {
+    "clangd": {
+      "command": "/usr/local//Cellar/llvm/9.0.1/bin/clangd",
+      "rootPatterns": [
+        "compile_commands.json"
+      ],
+      "filetypes": [
+        "c",
+        "cpp",
+        "objc",
+        "objcpp"
+      ],
+      "args": [
+        "-j=5"
+      ]
+    }
+  },
+  "python.jediEnabled": false
+}
+```
+
+https://releases.llvm.org/9.0.0/tools/clang/tools/extra/docs/ReleaseNotes.html
+Background indexing is on by default
+
+When using clangd, it will build an index of your code base (all files listed in your compile database). This index enables go-to-definition, find-references, and even code completion to find symbols across your project.
+
+This feature can consume a lot of CPU. It can be disabled using the --background-index=false flag, and respects -j to use fewer threads. The index is written to .clangd/index in the project root.
+
+```
+{
 "languageserver": {
   "cquery": {
       "command": "/usr/local/bin/cquery",
