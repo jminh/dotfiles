@@ -195,7 +195,7 @@ code index location
 
 - ccls
   ./.ccls-cache
-- clangd
+- clangd (version 9.0.0)
   ./.clangd/index
 - cquery
    defined in cacheDirectory
