@@ -48,3 +48,130 @@ Usage
 C-c C-C    -> type secret
 
 M-x org-decrpt-entry
+
+* org-crpt Mac
+
+gpg1
+#+BEGIN_EXAMPLE
+$ which gpg1
+/usr/local/bin/gpg1
+
+$ gpg1 --version
+gpg (GnuPG) 1.4.23
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+#+END_EXAMPLE
+
+emacs
+#+BEGIN_EXAMPLE
+/usr/local/bin/emacs --version
+GNU Emacs 26.3
+
+brew info emacs-plus
+d12frosted/emacs-plus/emacs-plus: stable 26.3, HEAD
+GNU Emacs text editor
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+brew list | grep gnupg
+gnupg@1.4
+
+brew list | grep emacs
+emacs-plus
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+init.el
+
+  (custom-set-variables
+   '(epg-gpg-program "gpg1"))
+  (setf epa-pinentry-mode 'loopback)
+
+  (require 'org-crypt)
+  (org-crypt-use-before-save-magic)
+  (setq org-crypt-tag-matcher "secret")
+  (setq org-tags-exclude-from-inheritance (quote ("secret")))
+  (setq org-crypt-key nil)
+
+  (setq epa-file-select-keys 0)
+  (setq epa-file-cache-passphrase-for-symmetric-encryption t)
+#+END_EXAMPLE
+
+Ref
+  https://colinxy.github.io/software-installation/2016/09/24/emacs25-easypg-issue.html
+
+#+BEGIN_EXAMPLE
+brew info gnupg@1.4
+gnupg@1.4: stable 1.4.23 (bottled)
+GNU Pretty Good Privacy (PGP) package
+https://www.gnupg.org/
+/usr/local/Cellar/gnupg@1.4/1.4.23_1 (62 files, 5.4MB) *
+  Poured from bottle on 2018-08-22 at 23:26:58
+From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/gnupg@1.4.rb
+==> Caveats
+This formula does not install either `gpg` or `gpgv` executables into
+the PATH.
+
+If you simply require `gpg` and `gpgv` executables without explicitly
+needing GnuPG 1.x we recommend:
+  brew install gnupg
+
+If you really need to use these tools without the "1" suffix you can
+add a "gpgbin" directory to your PATH from your ~/.zshrc like:
+
+    PATH="/usr/local/opt/gnupg@1.4/libexec/gpgbin:$PATH"
+
+Note that doing so may interfere with GPG-using formulae installed via
+Homebrew.
+==> Analytics
+install: 337 (30 days), 950 (90 days), 4,150 (365 days)
+install-on-request: 336 (30 days), 946 (90 days), 4,116 (365 days)
+build-error: 0 (30 days)
+#+END_EXAMPLE
+#+BEGIN_EXAMPLE
+brew info gpg1
+gnupg@1.4: stable 1.4.23 (bottled)
+GNU Pretty Good Privacy (PGP) package
+https://www.gnupg.org/
+/usr/local/Cellar/gnupg@1.4/1.4.23_1 (62 files, 5.4MB) *
+  Poured from bottle on 2018-08-22 at 23:26:58
+From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/gnupg@1.4.rb
+==> Caveats
+This formula does not install either `gpg` or `gpgv` executables into
+the PATH.
+
+If you simply require `gpg` and `gpgv` executables without explicitly
+needing GnuPG 1.x we recommend:
+  brew install gnupg
+
+If you really need to use these tools without the "1" suffix you can
+add a "gpgbin" directory to your PATH from your ~/.zshrc like:
+
+    PATH="/usr/local/opt/gnupg@1.4/libexec/gpgbin:$PATH"
+
+Note that doing so may interfere with GPG-using formulae installed via
+Homebrew.
+==> Analytics
+install: 331 (30 days), 943 (90 days), 4,143 (365 days)
+install-on-request: 330 (30 days), 939 (90 days), 4,109 (365 days)
+build-error: 0 (30 days)
+
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+brew info gnupg
+gnupg: stable 2.2.20 (bottled)
+GNU Pretty Good Privacy (PGP) package
+https://gnupg.org/
+Not installed
+From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/gnupg.rb
+==> Dependencies
+Build: pkg-config ✘
+Required: adns ✔, gettext ✔, gnutls ✘, libassuan ✔, libgcrypt ✔, libgpg-error ✔, libksba ✘, libusb ✔, npth ✔, pinentry ✔
+==> Analytics
+install: 33,448 (30 days), 124,197 (90 days), 510,134 (365 days)
+install-on-request: 29,039 (30 days), 105,817 (90 days), 427,399 (365 days)
+build-error: 0 (30 days)
+#+END_EXAMPLE
