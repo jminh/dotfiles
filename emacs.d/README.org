@@ -7,3 +7,44 @@ Emacs from scratch
   https://dev.to/huytd/emacs-from-scratch-1cg6
 
   http://blog.huy.rocks/emacs-from-scratch.html
+
+#+BEGIN_EXAMPLE
+(use-package magit
+  :pin melpa-stable
+  :ensure t
+)
+#+END_EXAMPLE
+
+* org-crpt Linux
+
+#+BEGIN_EXAMPLE
+emacs --version
+GNU Emacs 26.3
+
+gpg --version
+gpg (GnuPG) 2.2.19
+libgcrypt 1.8.5
+Copyright (C) 2019 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+init.el
+
+  (require 'org-crypt)
+  (org-crypt-use-before-save-magic)
+  (setq org-crypt-tag-matcher "secret")
+  (setq org-tags-exclude-from-inheritance (quote ("secret")))
+  (setq org-crypt-key nil)
+
+  (setq epa-file-select-keys 0)
+  (setq epa-file-cache-passphrase-for-symmetric-encryption t)
+#+END_EXAMPLE
+
+Usage
+
+C-c C-C    -> type secret
+
+M-x org-decrpt-entry
