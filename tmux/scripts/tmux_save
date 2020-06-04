@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess as sp
+from io import StringIO
+from datetime import date
+
+today = str(date.today())
+
+cmd = "hostname"
+p = sp.run([cmd], stdout=sp.PIPE, shell=True)
+print(p.stdout.decode())
+
+std_output =StringIO(p.stdout.decode())
+
+filename = ("tmux_" + p.stdout.decode().strip() + "_" + today + "_resurrect.txt")
+print(filename)
+
+os.system("rm ~/.tmux/resurrect/*")
+os.system("~/.tmux/plugins/tmux-resurrect/scripts/save.sh")
+
+cmd = "cp ~/.tmux/resurrect/last ~/.tmux/%s" %filename
+print(cmd)
+os.system(cmd)

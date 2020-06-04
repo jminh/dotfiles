@@ -1,0 +1,15 @@
+
+* Usage
+
+#+BEGIN_SRC sh
+  ssh hostA ~/dotfiles/tmux/scripts/tmux_save.py
+  ssh hostB ~/dotfiles/tmux/scripts/tmux_save.py
+#+END_SRC
+
+Set up a cron job to save your tmux state.
+
+* Dependency
+
+  https://github.com/tmux-plugins/tmux-resurrect
+
+  https://github.com/tmux-plugins/tmux-resurrect/blob/master/scripts/save.sh
