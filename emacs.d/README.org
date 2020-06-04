@@ -15,7 +15,7 @@ Emacs from scratch
 )
 #+END_EXAMPLE
 
-* org-crpt Linux
+* org-crpt Linux gpg2
 
 #+BEGIN_EXAMPLE
 emacs --version
@@ -49,7 +49,7 @@ C-c C-C    -> type secret
 
 M-x org-decrpt-entry
 
-* org-crpt Mac
+* org-crpt Mac gpg1
 
 gpg1
 #+BEGIN_EXAMPLE
