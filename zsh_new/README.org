@@ -1,0 +1,16 @@
+
+* setup
+  
+#+BEGIN_SRC sh
+mkdir ~/.zinit
+git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
+
+cd ~
+ln -s ~/dotfiles/zsh_new/.zshrc .
+#+END_SRC
+
+* misc
+
+function brew() {
+    PATH="$HOME/.linuxbrew/bin:$PATH" $HOME/.linuxbrew/bin/brew "$@"
+}
