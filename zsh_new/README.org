@@ -11,6 +11,12 @@ ln -s ~/dotfiles/zsh_new/.zshrc .
 
 * misc
 
+alias tb="nc termbin.com 9999"
+
 function brew() {
     PATH="$HOME/.linuxbrew/bin:$PATH" $HOME/.linuxbrew/bin/brew "$@"
+}
+
+function diff2html() {
+    PATH="/remote/ming/nodejs/node-v10.16.0-linux-x64/bin:$PATH" /remote/ming/nodejs/node-v10.16.0-linux-x64-npmHere/node_modules/diff2html-cli/bin/diff2html "$@"
 }
