@@ -17,6 +17,10 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice lucid wait='1'
 zinit light skywind3000/z.lua
 
+alias ta='tmux attach -t'
+alias tl='tmux list-sessions'
+alias ts='tmux new-session -s'
+
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
