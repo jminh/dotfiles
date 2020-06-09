@@ -15,6 +15,13 @@ Emacs from scratch
 )
 #+END_EXAMPLE
 
+* undo-tree
+  
+- undo-tree-visualize
+- d (see diff)
+
+https://emacs.stackexchange.com/questions/27339/how-to-operate-the-undo-redo-tree-in-spacemacs
+
 * org-crpt Linux gpg2
 
 #+BEGIN_EXAMPLE
