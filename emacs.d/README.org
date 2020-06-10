@@ -1,4 +1,6 @@
 
+HOME=~/dotfiles/emacs.d emacs hello.org
+https://stackoverflow.com/questions/21568042/how-to-start-up-emacs-with-different-configurations
 
 Reference
 
