@@ -184,3 +184,22 @@ install: 33,448 (30 days), 124,197 (90 days), 510,134 (365 days)
 install-on-request: 29,039 (30 days), 105,817 (90 days), 427,399 (365 days)
 build-error: 0 (30 days)
 #+END_EXAMPLE
+
+* emacs keyring update
+
+Dealing with Expired ELPA GPG Keys
+ https://metaredux.com/posts/2019/12/09/dealing-with-expired-elpa-gpg-keys.html
+
+evail fail to install undo tree
+ https://github.com/bbatsov/prelude/issues/1225
+
+gnu-elpa-keyring-update
+http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html
+    https://github.com/bbatsov/prelude/issues/1225
+
+https://glyph.twistedmatrix.com/2015/11/editor-malware.html
+
+https://github.com/jkitchin/scimax/issues/159
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) in the init.el to
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+
