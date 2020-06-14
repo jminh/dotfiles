@@ -27,6 +27,14 @@ C-b k
 
 C-b j
 
+# save tmux state
+
+```
+./scripts/tmux_save
+```
+
+https://github.com/tmux-plugins/tmux-resurrect
+
 # centos6 centos7 zsh version
 
 cshrc
