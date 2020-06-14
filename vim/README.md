@@ -461,6 +461,24 @@ after that. Otherwise, you won't see the colors.
 ## ctrlsf
 C-F f :Search the current word
 
+# vim-mundo (undo tree)
+
+:MundoToggle
+
+Use p on a state to make the preview window
+show the diff
+between your current state and the selected state
+
+```
+p: Diff of selected undo and current statue
+<cr>: Revert to selecte state
+
+i: inline diff mode
+
+d: Vert diff of undo with current statue
+
+```
+
 # commentary
 
 gcc
