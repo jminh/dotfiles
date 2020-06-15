@@ -5,6 +5,13 @@
 
 # vim-signify
 
+Skip perforce
+```
+https://github.com/mhinz/vim-signify/issues/319
+"let g:signify_skip = {'vcs': { 'deny': ['perforce'] }}
+":autocmd BufRead,BufNewFile /path/to/proj/* let g:signify_skip = {'vcs': { 'deny': ['perforce'] }}
+```
+
 The master branch is async-only (at least Vim 8.0.902)
 
 ```
