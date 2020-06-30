@@ -1,0 +1,2 @@
+
+Set the RIPGREP_CONFIG_PATH environment variable to the file path of your config file.
