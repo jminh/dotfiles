@@ -203,3 +203,35 @@ https://github.com/jkitchin/scimax/issues/159
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) in the init.el to
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 
+
+* misc
+
+** org mode config
+*** Way 1
+
+Spacemacs configuration in a structured org-mode file
+https://www.reddit.com/r/emacs/comments/7ntc6p/spacemacs_configuration_in_a_structured_orgmode/
+https://github.com/ralesi/spacemacs.org/blob/master/spacemacs.org
+
+
+*** Way 2
+#+begin_example
+;; -*- orgstruct-heading-prefix-regexp: ";;" -*-
+#+end_example
+
+https://karl-voit.at/2017/06/03/emacs-org/
+
+** emacs package 
+
+https://www.spacemacs.org/doc/LAYERS.html
+
+** Why do easy templates, .e.g, "< s TAB" in org 9.2 not work?       spacemacs
+
+
+#+begin_src elisp
+(require 'org-tempo)
+#+end_src
+
+https://emacs.stackexchange.com/questions/46988/why-do-easy-templates-e-g-s-tab-in-org-9-2-not-work
+
+
