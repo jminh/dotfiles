@@ -1,0 +1,70 @@
+
+~/.spacemacs will always take priority over ~/.spacemacs.d/init.el,
+so ~/.spacemacs must not exist
+for ~/.spacemacs.d/init.el to be used by Spacemacs.
+
+This (.spacemacs.d) is based on spacemacs develop branch.
+
+#+begin_example
+cd ~/.emacs.d/
+git log -1                                                                                                                                        (develop)
+commit 39df5e26b6a2c626b25a2ee68904ce02c2dc023d (HEAD -> develop, origin/develop)
+Author: syl20bnr <sylvain.benner@gmail.com>
+Date:   Fri Aug 21 17:35:24 2020 -0400
+
+    [editing] Add qwerty-ca-fr layout to evil-swap-keys config
+#+end_example
+
+* Update Spacemacs On develop branch
+
+If you are on the develop branch then you'll have to
+update the Spacemacs repository manually.
+
+1. Close Emacs and update the git repository:
+
+git pull --rebase
+
+2. Restart Emacs to complete the upgrade.
+
+After updating Spacemacs (either manually or automatically),
+then you also should check if any updates are available for your packages.
+On the Spacemacs Home Buffer SPC b h,
+click (press RET) on the [Update Packages] button.
+
+* Update and Rollback
+
+configuration-layer/update-packages
+
+configuration-layer/rollback
+
+See https://www.spacemacs.org/doc/DOCUMENTATION.html#update-and-rollback
+
+* org-mode with-eval-after-load
+ 
+Why do some of my org-related settings cause problems?
+  https://www.spacemacs.org/doc/FAQ
+
+#+begin_example
+(with-eval-after-load 'org
+  ;; here goes your Org config :)
+  ;; ....
+  )
+#+end_example
+
+* spacemacs layer
+  
+https://www.spacemacs.org/doc/LAYERS.html
+Nomenclature
+
+ Package
+ Layer
+ 
+The Emacs loading process
+(load-file "~/elisp/foo.el")
+
+my-feature.el
+;; Your code goes here ...
+
+(provide 'my-feature)
+
+(require 'my-feature)
