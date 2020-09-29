@@ -497,6 +497,19 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
+
+  ;; tangle without actually loading org
+  (let ((src (concat dotspacemacs-directory "spacemacs.org"))
+        (ui (concat dotspacemacs-directory "user-init.el"))
+        (uc (concat dotspacemacs-directory "user-config.el")))
+    (when (or (file-newer-than-file-p src ui)
+              (file-newer-than-file-p src uc))
+      (call-process
+       (concat invocation-directory invocation-name)
+       nil nil t
+       "-q" "--batch" "--eval" "(require 'ob-tangle)"
+       "--eval" (format "(org-babel-tangle-file \"%s\")" src)))
+    (load-file ui))
   )
 
 (defun dotspacemacs/user-load ()
@@ -526,6 +539,9 @@ before packages are loaded."
 
   (setq epa-file-select-keys 0)
   (setq epa-file-cache-passphrase-for-symmetric-encryption t)
+
+  (let ((uc (concat dotspacemacs-directory "user-config.el")))
+    (load-file uc))
 
   (defun toggle-company-ispell ()
     (interactive)

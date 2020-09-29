@@ -68,3 +68,18 @@ my-feature.el
 (provide 'my-feature)
 
 (require 'my-feature)
+
+* Spacemacs configuration in a structured org-mode file
+
+https://www.reddit.com/r/emacs/comments/7ntc6p/spacemacs_configuration_in_a_structured_orgmode/
+https://github.com/ralesi/spacemacs.org
+
+Create the spacemacs.org file in your ~/.spacemacs.d
+
+#+begin_example
+#+BEGIN_SRC emacs-lisp :tangle user-init.el
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :tangle user-config.el
+#+END_SRC
+#+end_example

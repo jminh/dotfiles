@@ -1,0 +1,15 @@
+
+<s TAB to make source block does not work after updating emacs to 26
+https://www.reddit.com/r/emacs/comments/acixqu/s_tab_to_make_source_block_does_not_work_after/
+
+After change to org-mode 9.1.13, TAB not work when put after `<s`
+https://emacs.stackexchange.com/questions/42338/after-change-to-org-mode-9-1-13-tab-not-work-when-put-after-s
+
+#+BEGIN_SRC emacs-lisp :tangle user-config.el
+(with-eval-after-load 'org
+  (require 'org-tempo)
+  )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :tangle user-init.el
+#+END_SRC
