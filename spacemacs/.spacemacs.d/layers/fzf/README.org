@@ -1,0 +1,35 @@
+
+#+begin_example
+rg -L '^[*]' | rg .
+
+rg -L '^[*]' | rg . | fzf
+#+end_example
+
+emacs Fuzzy-searching notes with fzf
+  https://llazarek.com/2019/01/fuzzy-searching-notes-with-fzf.html
+
+https://github.com/junegunn/fzf
+
+fzf fd
+#+begin_src sh
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f'
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+#+end_src
+
+If you want the command to follow symbolic links, and don't want it to exclude hidden files, use the following command:
+
+#+begin_src sh
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+#+end_src
+
+---
+
+Building personal search infrastructure for your knowledge and code
+ https://beepb00p.xyz/pkm-search.html#appendix_emacs
+#+begin_example
+dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
+
+dotspacemacs-additional-packages '(helm-rg)
+#+end_example
