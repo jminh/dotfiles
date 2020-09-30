@@ -1,0 +1,36 @@
+
+* windows setup
+  
+To use git layer, ensure git is installed on your system.
+
+#+begin_example
+scoop install git
+#+end_example
+
+To use org-roam layer, ensure sqlite is installed on oyur system.
+
+#+begin_example
+scoop instll sqlite
+#+end_example
+
+rg, fd
+
+#+begin_example
+scoop install ripgrep
+scoop install fd
+#+end_example
+
+* Spacemacs configuration in a structured org-mode file
+
+https://www.reddit.com/r/emacs/comments/7ntc6p/spacemacs_configuration_in_a_structured_orgmode/
+https://github.com/ralesi/spacemacs.org
+
+Create the spacemacs.org file in your ~/.spacemacs.d
+
+#+begin_example
+#+BEGIN_SRC emacs-lisp :tangle user-init.el
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :tangle user-config.el
+#+END_SRC
+#+end_example
