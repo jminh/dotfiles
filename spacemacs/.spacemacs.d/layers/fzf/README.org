@@ -5,6 +5,14 @@ rg -L '^[*]' | rg .
 rg -L '^[*]' | rg . | fzf
 #+end_example
 
+Full-text fuzzy search that recursively examines all files in a directory, following symlinks.
+
+#+begin_example
+mkdir ~/search; cd ~/search
+ln -s /path/to/dir .
+ln -s /path/to/flie .
+#+end_example
+
 emacs Fuzzy-searching notes with fzf
   https://llazarek.com/2019/01/fuzzy-searching-notes-with-fzf.html
 
@@ -23,6 +31,10 @@ If you want the command to follow symbolic links, and don't want it to exclude h
 #+begin_src sh
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 #+end_src
+
+#+begin_example
+FZF_DEFAULT_COMMAND=fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f
+#+end_example
 
 ---
 
