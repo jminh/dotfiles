@@ -10,6 +10,12 @@ https://emacs.stackexchange.com/questions/42338/after-change-to-org-mode-9-1-13-
 ;;  (require 'org-tempo)
 #+END_SRC
 
+* ediff
+
+#+BEGIN_SRC emacs-lisp :tangle user-config.el
+(setq ediff-split-window-function 'split-window-horizontally)
+#+END_SRC
+
 * perforce p4 diff ediff
 
 https://stackoverflow.com/questions/3822473/p4config-with-emacs
