@@ -42,3 +42,30 @@ env P4DIFF='emacs -diff' p4 diff
 (add-to-list 'command-switch-alist '("-merge" . command-line-merge))
 #+END_SRC
 
+* fzf
+
+https://llazarek.com/2019/01/fuzzy-searching-notes-with-fzf.html
+
+The ideal solution would be full-text fuzzy search
+that recursively examines all files
+in a directory, following symlinks.
+
+I can symlink every place I put my notes to one location.
+
+#+BEGIN_SRC emacs-lisp :tangle user-config.el
+(use-package fzf
+  :ensure t
+  :bind ("C-S-s" . ll/fzf/notes)
+
+  :config
+  (customize-set-variable 'fzf/args
+                          "-x --color bw --print-query --delimiter=: --nth=3")
+  ;;(customize-set-variable 'fzf/executable
+  ;;                        "~/.fzf/bin")
+  (defvar ll/fzf/notes-directory "/path/to/search")
+  (defun ll/fzf/notes ()
+    (interactive)
+    (fzf/start ll/fzf/notes-directory
+               "rg '^[*]' | rg .")))
+               ;;"rg '^[*]' | ag -f --nobreak --noheading .")))
+#+END_SRC
