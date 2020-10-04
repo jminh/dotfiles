@@ -52,6 +52,13 @@ in a directory, following symlinks.
 
 I can symlink every place I put my notes to one location.
 
+Building personal search infrastructure for your knowledge and code
+https://beepb00p.xyz/pkm-search.html#org_mode
+
+use helm-swoop for search within the buffer
+helm-org-ql for incremental search in the current buffer
+org-ql-search interactively prompts you for the search target, sort and grouping
+
 #+BEGIN_SRC emacs-lisp :tangle user-config.el
 (use-package fzf
   :ensure t
