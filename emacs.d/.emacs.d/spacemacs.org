@@ -1,0 +1,38 @@
+
+* org-mode <s
+<s TAB to make source block does not work after updating emacs to 26
+https://www.reddit.com/r/emacs/comments/acixqu/s_tab_to_make_source_block_does_not_work_after/
+
+After change to org-mode 9.1.13, TAB not work when put after `<s`
+https://emacs.stackexchange.com/questions/42338/after-change-to-org-mode-9-1-13-tab-not-work-when-put-after-s
+
+#+BEGIN_SRC emacs-lisp :tangle user-config.el
+;;  (require 'org-tempo)
+#+END_SRC
+
+* perforce p4 diff ediff
+
+https://stackoverflow.com/questions/3822473/p4config-with-emacs
+
+#+begin_example
+env P4DIFF='emacs -diff' p4 diff
+#+end_example
+
+#+BEGIN_SRC emacs-lisp :tangle user-init.el
+;; -diff
+(defun command-line-diff (switch)
+  (let ((file1 (pop command-line-args-left))
+        (file2 (pop command-line-args-left)))
+    (ediff file1 file2)))
+(add-to-list 'command-switch-alist '("-diff" . command-line-diff))
+
+;; -merge
+(defun command-line-merge (switch)
+  (let ((base (pop command-line-args-left))
+        (sccs (pop command-line-args-left))
+        (mine (pop command-line-args-left))
+        (merg (pop command-line-args-left)))
+   (ediff-merge-with-ancestor sccs mine base () merg)))
+(add-to-list 'command-switch-alist '("-merge" . command-line-merge))
+#+END_SRC
+

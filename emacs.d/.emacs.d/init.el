@@ -103,6 +103,21 @@
   "at"  '(ansi-term :which-key "open terminal")
 ))
 
+;; tangle without actually loading org
+(let ((src (concat user-emacs-directory "spacemacs.org"))
+      (ui (concat user-emacs-directory "user-init.el"))
+      (uc (concat user-emacs-directory "user-config.el")))
+  (when (or (file-newer-than-file-p src ui)
+            (file-newer-than-file-p src uc))
+    (call-process
+     (concat invocation-directory invocation-name)
+     nil nil t
+     "-q" "--batch" "--eval" "(require 'ob-tangle)"
+     "--eval" (format "(org-babel-tangle-file \"%s\")" src)))
+  (load-file ui))
+(let ((uc (concat user-emacs-directory "user-config.el")))
+  (load-file uc))
+
 ;; Disable backup files
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
