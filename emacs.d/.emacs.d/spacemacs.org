@@ -42,6 +42,26 @@ env P4DIFF='emacs -diff' p4 diff
 (add-to-list 'command-switch-alist '("-merge" . command-line-merge))
 #+END_SRC
 
+* auto-completion
+
+http://blog.binchen.org/posts/emacs-auto-completion-for-non-programmers.html
+
+#+begin_example
+;;(use-package predictive
+;;    :ensure t)
+(use-package company
+  :ensure t
+  :config
+  (global-company-mode t)
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 3)
+  (setq company-backends
+        '((company-ispell
+           )
+          )))
+;;(setq company-ispell-dictionary (file-truename "/Users/ming/dict.txt"))
+#+end_example
+
 * fzf
 
 https://llazarek.com/2019/01/fuzzy-searching-notes-with-fzf.html
