@@ -1,4 +1,4 @@
-
+* org-mode <s TAB
 <s TAB to make source block does not work after updating emacs to 26
 https://www.reddit.com/r/emacs/comments/acixqu/s_tab_to_make_source_block_does_not_work_after/
 
@@ -11,5 +11,110 @@ https://emacs.stackexchange.com/questions/42338/after-change-to-org-mode-9-1-13-
   )
 #+END_SRC
 
+* org-mode agenda 
+
+#+BEGIN_SRC emacs-lisp :tangle user-config.el
+(setq org-agenda-files '("c:/Users/ming/scoop/apps/msys2/20180531/home/ming/workspace/org_work_note/"))
+#+END_SRC
+
+#+begin_example
+(setq org-agenda-files (quote ("~/git/org"
+                               "~/git/org/client1"
+                               "~/git/client2")))
+#+end_example
+
+#+BEGIN_SRC emacs-lisp :tangle user-config.el
+  (setq org-tags-exclude-from-inheritance '("WIP" "SNPS" "MING" "TODO" "STAR"))
+
+  (setq org-agenda-custom-commands
+       '(("p" "List Non-done projects"
+           tags "+WIP+SNPS")))
+
+  (setq org-agenda-custom-commands
+        '(("psw" "List Non-done projects" tags "+WIP+SNPS")
+          ("pst" "List Non-done projects" tags "+TODO+SNPS")
+          ("pmw" "List Non-done projects" tags "+WIP+MING")
+          ("pmt" "List Non-done projects" tags "+TODO+MING")
+          ))
+#+END_SRC
+
+** extract org mode tags
+
+org_extract_tag.py   
+   #+begin_src python
+import sys
+
+file_ = sys.argv[1]
+
+ret = set()
+for line in open(file_):
+    if not line.startswith("*"):
+        continue
+    if ":" not in line:
+        continue
+    tags = line.split()
+    for tag in tags:
+        if not tag.startswith(":"):
+            continue
+        if not tag.endswith(":"):
+            continue
+        #print(tag)
+        for i in tag.split(":"):
+            #print(i)
+            if i:
+                ret.add(i)
+
+for i in ret:
+    print(i)
+   #+end_src   
+
+* git, sqlite3
+
 #+BEGIN_SRC emacs-lisp :tangle user-init.el
+(add-to-list 'exec-path "C:/Users/ming/scoop/apps/msys2/current/usr/bin") 
+#+END_SRC
+
+for ediff to work
+(executable-find "diff") 
+Here I use msys2 diff
+
+(ediff-files "c:/Users/ming/AppData/Roaming/.spacemacs.d/spacemacs.org"
+             "c:/Users/ming/AppData/Roaming/dotfiles/spacemacs/.spacemacs.d/spacemacs.org") 
+
+(ediff-files "c:/Users/ming/AppData/Roaming/.spacemacs.d/init.el"
+             "c:/Users/ming/AppData/Roaming/dotfiles/spacemacs/.spacemacs.d/init.el") 
+             
+(executable-find "sqlite3") 
+
+for git layer to work
+(executable-find "git") 
+
+* org-ql
+  
+#+begin_example
+dotspacemacs-additional-packages '(org-ql helm-org)
+#+end_example  
+
+** custom.el
+
+Option org-ql-views may now be customized in a guided,
+structured way with the customization UI
+(e.g. M-x customize-option RET org-ql-views RET,
+or press c in the org-ql-view-sidebar buffer).
+  
+#+BEGIN_SRC emacs-lisp :tangle user-init.el
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
+#+END_SRC
+
+(tags& "MING" "WIP")
+(tags& "MING" "TODO")
+
+** split window
+
+https://github.com/syl20bnr/spacemacs/issues/5140 
+
+#+BEGIN_SRC emacs-lisp :tangle user-config.el
+  (setq split-height-threshold nil)
+(setq split-width-threshold 0)
 #+END_SRC
