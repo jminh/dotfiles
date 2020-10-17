@@ -1,15 +1,147 @@
 
 ln -s init.vim ~/.config/nvim/init.vim
 
-Pre-built packages
+* Pre-built packages
 Linux (x64) - Download nvim.appimage
 https://github.com/neovim/neovim/releases/
 
-Nvim shows weird symbols (�[2 q) when changing modes
+* Run M-x org-babel-tangle
+** Nvim shows weird symbols (�[2 q) when changing modes
 https://github.com/neovim/neovim/wiki/FAQ
 
-#+begin_example
+#+BEGIN_SRC conf :tangle init_.vim
 :set guicursor=
 " Workaround some broken plugins which set guicursor indiscriminately.
 :autocmd OptionSet guicursor noautocmd set guicursor=
-#+end_example
+         
+#+END_SRC
+
+** basic vimrc
+   
+#+BEGIN_SRC conf :tangle init_.vim
+ " Reference https://github.com/jminh/dotfiles/blob/master/vim/.vimrc
+
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effet.
+set nocompatible " not compatible with the old-fashion vi mode
+
+
+" ========== General Config ==========
+set nu "Line numbers are good
+set history=1000 "Store lots of :cmdline history
+set showcmd "Show incompatible cmds down the bottom
+set autoread "Reload files changed outside vim
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+" Configuring Vim right
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
+
+"turn on sytax highlighting
+syntax on
+
+" yank and paste with the X11 clipborad (http://goo.gl/aXb29o)
+ if has('unnamedplus')
+    set clipboard=unnamedplus
+ endif
+
+" Start searching when you type the first character of the search string
+set incsearch
+
+" Change leader to a comma because the backslash is too far away
+" That means all \x commands turn into ,x
+" The mapleader has to be set before vundle starts loading all
+" the plugins.
+let mapleader=","
+
+" ========== Turn Off Swap Files ==========
+set noswapfile
+set nobackup
+set nowb
+
+" 顯示空白 http://softsmith.blogspot.tw/2013/03/vim-tab.html
+set listchars=tab:>-,trail:-,extends:#,nbsp:-
+set list
+
+" More natural split opening http://goo.gl/Q7sbpw
+" Open new split panes to right and bottom, which feels more natural than
+" Vim's default
+set splitbelow
+set splitright
+
+" Easier split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Why use jk http://learnvimscriptthehardway.stevelosh.com/chapters/10.html
+inoremap jk <esc> 
+
+" buffer key map https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/ {{{
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+" Close the current buffer and move to the previous one (This replicates the idea of closing a tab)
+nmap <leader>bq :bp <BAR> bd #<CR>
+
+" Vim - Python WiKi https://wiki.python.org/moin/Vim
+filetype indent plugin on
+
+set tabstop=8
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+filetype indent on
+
+try
+    colorscheme peaksea
+    set background=dark
+catch
+    colorscheme desert
+endtry
+
+" Highlight all search pattern matches http://vim.wikia.com/wiki/VimTip14
+" :nnoremap <F8> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+" Press Space to turn off highlighting and clear any message already displayed.
+nnoremap <silent> <leader><Space> :nohlsearch<Bar>:echo<CR>
+
+" ,p toggles paste mode
+nmap <leader>p :set paste!<BAR>set paste?<CR>
+
+function! WrapForTmux(s)
+  if !exists('$TMUX')
+    return a:s
+  endif
+
+  let tmux_start = "\<Esc>Ptmux;"
+  let tmux_end = "\<Esc>\\"
+
+  return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+endfunction
+
+let &t_SI .= WrapForTmux("\<Esc>[?2004h")
+let &t_EI .= WrapForTmux("\<Esc>[?2004l")
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+" }}}
+
+" Static cursor shape {{{ Swap iTerm2 cursors in vim insert mode when using tmux
+if exists('$ITERM_PROFILE')
+  if exists('$TMUX') 
+    let &t_SI = "\<Esc>[3 q"
+    let &t_EI = "\<Esc>[0 q"
+  else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  endif
+end
+" }}}
+#+END_SRC
