@@ -1,0 +1,15 @@
+
+ln -s init.vim ~/.config/nvim/init.vim
+
+Pre-built packages
+Linux (x64) - Download nvim.appimage
+https://github.com/neovim/neovim/releases/
+
+Nvim shows weird symbols (�[2 q) when changing modes
+https://github.com/neovim/neovim/wiki/FAQ
+
+#+begin_example
+:set guicursor=
+" Workaround some broken plugins which set guicursor indiscriminately.
+:autocmd OptionSet guicursor noautocmd set guicursor=
+#+end_example
