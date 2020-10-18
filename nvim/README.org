@@ -1,6 +1,13 @@
 
 ln -s init.vim ~/.config/nvim/init.vim
 
+Run
+
+#+begin_example
+emacs --batch --eval "(require 'org)" \
+      --eval '(org-babel-tangle-file "README.org")'
+#+end_example
+
 * Pre-built packages
 Linux (x64) - Download nvim.appimage
 https://github.com/neovim/neovim/releases/
