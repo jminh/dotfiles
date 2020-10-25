@@ -24,7 +24,7 @@ https://emacs.stackexchange.com/questions/42338/after-change-to-org-mode-9-1-13-
 #+end_example
 
 #+BEGIN_SRC emacs-lisp :tangle user-config.el
-  (setq org-tags-exclude-from-inheritance '("WIP" "SNPS" "MING" "TODO" "STAR"))
+  (setq org-tags-exclude-from-inheritance '("WIP" "SNPS" "MING" "TODO" "STAR" "waitfor"))
 
   (setq org-agenda-custom-commands
        '(("p" "List Non-done projects"
@@ -33,8 +33,10 @@ https://emacs.stackexchange.com/questions/42338/after-change-to-org-mode-9-1-13-
   (setq org-agenda-custom-commands
         '(("psw" "List Non-done projects" tags "+WIP+SNPS")
           ("pst" "List Non-done projects" tags "+TODO+SNPS")
+          ("psd" "List Non-done projects" tags "+waitfor+SNPS")
           ("pmw" "List Non-done projects" tags "+WIP+MING")
           ("pmt" "List Non-done projects" tags "+TODO+MING")
+          ("pmd" "List Non-done projects" tags "+waitfor+MING")
           ))
 #+END_SRC
 
