@@ -1,0 +1,67 @@
+
+* fish
+  
+  #+begin_example
+fish
+  #+end_example
+
+Out of the box colors, autosuggestions and other features.
+
+* ctrl-r history fzf
+
+Get fisher
+  #+begin_example
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+  #+end_example
+
+  #+begin_example
+cd ~/.config/fish/functions
+  #+end_example
+
+Use fisher to install fzf plugin
+
+Way1
+  #+begin_example
+fisher add jethrokuan/fzf
+  #+end_example
+
+Way2 offline install
+#+begin_example
+git clone https://github.com/jethrokuan/fzf
+fisher add ./fzf/
+#+end_example
+
+https://github.com/jethrokuan/fzf
+https://github.com/jorgebucaran/fisher
+
+* manual installation
+
+  #+begin_example
+git clone https://github.com/fish-shell/fish-shell
+mkdir build; cd build
+CC=/path/to/bin/gcc CXX=/path/to/bin/g++ \
+cmake -DCMAKE_INSTALL_PREFIX=~/opt/fish/bin ..
+make
+make install
+  #+end_example  
+
+If gcc is old, you should specify a newer gcc to cmake.
+
+#+begin_example
+~/opt/fish/bin/bin/fish: /usr/lib64/libstdc++.so.6: version `GLIBCXX_3.4.20' not found (required by ~/opt/fish/bin/bin/fish)
+~/opt/fish/bin/bin/fish: /usr/lib64/libstdc++.so.6: version `GLIBCXX_3.4.18' not found (required by ~/opt/fish/bin/bin/fish)
+~/opt/fish/bin/bin/fish: /usr/lib64/libstdc++.so.6: version `GLIBCXX_3.4.14' not found (required by ~/opt/fish/bin/bin/fish)
+~/opt/fish/bin/bin/fish: /usr/lib64/libstdc++.so.6: version `CXXABI_1.3.5' not found (required by ~/opt/fish/bin/bin/fish)
+#+end_example
+
+sol 1
+
+#+begin_example
+LD_LIBRARY_PATH=/path/to/GCC/lib64:$LD_LIBRARY_PATH fish
+#+end_example
+
+sol 2
+#+begin_example
+patchelf --set-rpath /path/to/GCC/lib64:$ORIGIN \
+~/opt/fish/bin/bin/fish
+#+end_example
