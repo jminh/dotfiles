@@ -6,6 +6,8 @@ Run
 #+begin_example
 emacs --batch --eval "(require 'org)" \
       --eval '(org-babel-tangle-file "README.org")'
+
+ln -s init_.vim ~/.config/nvim/init.vim
 #+end_example
 
 * Pre-built packages

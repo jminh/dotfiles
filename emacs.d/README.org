@@ -2,6 +2,12 @@
 HOME=~/dotfiles/emacs.d emacs hello.org
 https://stackoverflow.com/questions/21568042/how-to-start-up-emacs-with-different-configurations
 
+#+begin_example
+touch runemacs
+echo 'env HOME=~/dotfiles/emacs.d $@' > runemacs
+chmod u+x runemacs
+#+end_example
+
 Reference
 
 Emacs from scratch
