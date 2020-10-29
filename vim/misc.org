@@ -1,0 +1,17 @@
+
+On a slow machine(disk)
+
+#+begin_example
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'on': []}
+
+function! CocTimerStart(timer)
+    call plug#load('coc.nvim')
+    exec "CocStart"
+endfunction
+call timer_start(5000,'CocTimerStart',{'repeat':1})
+#+end_example
+
+#+begin_example
+Plug 'w0rp/ale', {'on': 'ALEToggle'}
+#+end_example
+
