@@ -46,6 +46,32 @@ let g:which_key_map['w'] = {
       \ '?' : ['Windows'    , 'fzf-window']            ,
       \ }
 
+" lsp
+let g:which_key_map.g = {
+      \ 'name' : '+lsp',
+      \ 'r' : ['<Plug>(coc-references)'  , 'references']       ,
+      \ 'g' : {
+        \ 'name': '+goto',
+        \ 'd' : ['<Plug>(coc-definition)'     , 'definition']      ,
+        \ 't' : ['<Plug>(coc-type-definition)', 'type-definition'] ,
+        \ 'i' : ['<Plug>(coc-implementation)' , 'implementation']  ,
+        \ },
+      \ }
+
+" bookmark
+let g:bookmark_no_default_key_mappings = 1
+let g:which_key_map.a = { 'name' : '+bookmark' }
+let g:which_key_map.a.m = ['BookmarkToggle'   , 'mark']
+let g:which_key_map.a.i = ['BookmarkAnnotate'   , 'mark-annotate']
+let g:which_key_map.a.a = ['BookmarkShowAll'   , 'mark-list']
+let g:which_key_map.a.j = ['BookmarkNext'   , 'mark-next']
+let g:which_key_map.a.k = ['BookmarkPrev'   , 'mark-prev']
+let g:which_key_map.a.x = ['BookmarkClearAll'   , 'clear-all']
+
+" search
+let g:which_key_map.s = { 'name' : '+search' }
+let g:which_key_map.s.s = ['Lines'   , 'helm-swoop']
+
 autocmd VimEnter * call which_key#register(',', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey ','<CR>
 vnoremap <silent> <leader> :<c-u>WhichKey ','<CR>
