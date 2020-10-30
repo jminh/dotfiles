@@ -109,6 +109,7 @@ set shortmess-=S
 Plug 'bronson/vim-visual-star-search'
 " vim bookmark
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'kshenoy/vim-signature', {'on': 'SignatureRefresh'}
 " Plugin 'haya14busa/incsearch.vim'
 " mimics Ctrl-Shift-F on Sublime Text 2 (depend on ack or ag)
 Plug 'dyng/ctrlsf.vim' " slow Plug
