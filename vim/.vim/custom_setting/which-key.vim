@@ -60,6 +60,8 @@ let g:which_key_map.g = {
 
 " bookmark
 let g:bookmark_no_default_key_mappings = 1
+let g:bookmark_save_per_working_dir = 1
+let g:bookmark_auto_save = 1
 let g:which_key_map.a = { 'name' : '+bookmark' }
 let g:which_key_map.a.m = ['BookmarkToggle'   , 'mark']
 let g:which_key_map.a.i = ['BookmarkAnnotate'   , 'mark-annotate']

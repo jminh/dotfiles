@@ -19,6 +19,7 @@
 - [[#tagbar][Tagbar]]
 - [[#mark][Mark]]
 - [[#ctrlsf][ctrlsf]]
+- [[#vim-bookmarks][vim-bookmarks]]
 - [[#vim-mundo-undo-tree][vim-mundo (undo tree)]]
 - [[#commentary-your-code][commentary your code]]
 - [[#c-clang-format][C++ clang-format]]
@@ -508,9 +509,9 @@ Run
   :AT
 
 No .projections.json No these commands.
-  
+
 * Tagbar
-  
+
 ,tt - toggle Tagbar
 
 * Mark
@@ -525,6 +526,19 @@ that. Otherwise, you won't see the colors.
 * ctrlsf
   
 C-F f :Search the current word
+
+* vim-bookmarks
+
+MattesGroeger/vim-bookmarks
+https://github.com/MattesGroeger/vim-bookmarks
+
+#+begin_example
+let g:bookmark_no_default_key_mappings = 1
+let g:bookmark_save_per_working_dir = 1
+let g:bookmark_auto_save = 1
+#+end_example
+
+See WhichKey
 
 * vim-mundo (undo tree)
   
