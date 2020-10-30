@@ -54,6 +54,7 @@ Plug 'maciakl/vim-neatstatus'
 " }}}
 
 " project {{{
+Plug 'tpope/vim-projectionist'
 "Plugin 'scrooloose/nerdtree'
 "Plugin 'jistr/vim-nerdtree-tabs'
 "Plugin 'kien/ctrlp.vim'

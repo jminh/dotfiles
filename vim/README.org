@@ -15,6 +15,7 @@
 - [[#ultisnip][UltiSnip]]
 - [[#key-binding][Key binding]]
 - [[#vim-rooter][vim-rooter]]
+- [[#vim-projectionist][vim-projectionist]]
 - [[#tagbar][Tagbar]]
 - [[#mark][Mark]]
 - [[#ctrlsf][ctrlsf]]
@@ -486,6 +487,28 @@ ack, ag, grep in the top level project dir
 
 ,cd - invoke vim-rooter manually
 
+* vim-projectionist
+https://github.com/tpope/vim-projectionist
+
+  #+begin_example
+touch .projections.json
+  #+end_example
+
+  #+begin_example
+{
+    arrow/*.cc" : {"alternate":"arrow/{}.h"},
+    "arrow/*.h" : {"alternate":"arrow/{}.c"}
+}
+  #+end_example
+
+Run
+  :A
+  :AS
+  :AV
+  :AT
+
+No .projections.json No these commands.
+  
 * Tagbar
   
 ,tt - toggle Tagbar
