@@ -36,6 +36,10 @@
   - [[#easy-motion][Easy Motion]]
   - [[#vim-tmux-vimux][vim tmux (vimux)]]
 - [[#slow-machine][slow machine]]
+  -  [[#create_all_in_one_vimrcpy][create_all_in_one_vimrc.py]]
+  - [[#how-to-local-modify][HOW to local modify]]
+    - [[#local-modify][local modify]]
+    - [[#plugin-check][plugin check]]
 - [[#compile-vim-82][compile vim 8.2]]
 
 * which-key
@@ -694,7 +698,7 @@ F2 - toggle NERDTree
 ,vz - Zoom the runner pane
 
 * slow machine
-
+**  create_all_in_one_vimrc.py
 See
   create_all_in_one_vimrc.py
 
@@ -737,6 +741,47 @@ endif
 source ~/.vim/settings.vim
 #+end_example
 
+** HOW to local modify
+*** local modify
+
+    #+begin_example
+     cp ~/.vimrc ~/.vimrc.bk
+
+     python create_all_in_one_vimrc.py > a
+     python a.py > b
+     p4merge b ~/.vimrc
+     cp b ~/.vimrc
+
+     rm .vimrc.bk if .vimrc is stable
+    #+end_example
+
+ a.py
+ #+begin_src python
+ """
+ Ignore vim comment
+ python3 a.py > a
+ """
+
+ for line in open("a"):
+     if line.strip().startswith('"'):
+         continue
+     if line.strip() == "":
+         continue
+     print(line, end="")
+
+ #+end_src
+
+*** plugin check
+ Add plugin
+   Plug 'google/vim-searchindex'
+
+ Remove plugin
+   Plug 'vim-scripts/L9'
+   Plug 'dyng/ctrlsf.vim'
+   Plug 'vim-scripts/a.vim'
+   Plugin 'jceb/vim-orgmode'
+   Plug 'Raimondi/delimitMate'
+   Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 * compile vim 8.2
   
 Some plugins require new vim and some need python support. You may need to compile a new one to suit your case.

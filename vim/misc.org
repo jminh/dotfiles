@@ -57,7 +57,7 @@ https://github.com/skywind3000/gutentags_plus
 Troubleshooting ERROR: gutentags: gtags-cscope job failed, returned: 1
 
 * vim-plug
-  
+
 https://github.com/junegunn/vim-plug/wiki/tips
 Loading plugins manually
 
