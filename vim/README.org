@@ -38,6 +38,8 @@
 
 :WhichKey(',')
 
+nnoremap <Space><Space> :Commands<CR> " FZF Commands
+
 * vim-signify
 
 Skip perforce

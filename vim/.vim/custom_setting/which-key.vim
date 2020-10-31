@@ -1,4 +1,6 @@
 
+nnoremap <Space><Space> :Commands<CR> " FZF
+
 let g:which_key_use_floating_win = 1
 "set timeoutlen=500
 
