@@ -17,6 +17,7 @@
 - [[#key-binding][Key binding]]
 - [[#vim-rooter][vim-rooter]]
 - [[#vim-projectionist][vim-projectionist]]
+- [[#avim][a.vim]]
 - [[#tagbar][Tagbar]]
 - [[#mark][Mark]]
 - [[#ctrlsf][ctrlsf]]
@@ -533,6 +534,18 @@ Run
   :AT
 
 No .projections.json No these commands.
+
+* a.vim
+
+https://github.com/vim-scripts/a.vim
+
+#+begin_example
+:A switches to the header file corresponding to the current file being edited (or vise versa)
+:AS splits and switches
+:AV vertical splits and switches
+:AT new tab and switches
+...
+#+end_example
 
 * Tagbar
 
