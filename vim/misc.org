@@ -70,3 +70,30 @@ vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
 Installing YouCompleteMe manually
 https://github.com/junegunn/vim-plug/wiki/faq
 
+* colortheme
+
+Preview https://vimcolorschemes.com/ 
+
+- equinusocio_material #true color
+- gruvbox
+- tender
+- peaksea
+- zenburn
+- jellybeans
+
+#+begin_example
+  set termguicolors
+  let g:equinusocio_material_style = 'darker'
+  colorscheme equinusocio_material
+#+end_example
+
+#+begin_example
+  set termguicolors
+  syntax enable
+  colorscheme tender
+#+end_example
+
+--
+
+1. PaperColor.vim (gray colorscheme)
+2. morning (gray colorschem)
