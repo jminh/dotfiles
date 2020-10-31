@@ -18,8 +18,28 @@ def custom_setting():
 for line in open(HOME + '/dotfiles/vim/.vimrc'):
     if line.strip() == "source ~/.vim/vundles.vim":
         for line in open(HOME + '/dotfiles/vim/.vim/vundles.vim'):
-            print(line, end='')
+            if "neoclide/coc.nvim" in line:
+                print("Plug 'neoclide/coc.nvim', {'branch': 'release', 'on': []}")
+            elif "w0rp/ale" in line:
+                print("Plug 'w0rp/ale', { 'on': 'ALEToggle'}")
+            else:
+                print(line, end='')
     elif 'source ~/.vim/settings.vim' in line:
         custom_setting()
     else:
         print(line, end='')
+
+print("""\
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 15
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+
+let g:coc_start_at_startup=0
+function! CocTimerStart(timer)
+    call plug#load('coc.nvim')
+    exec "CocStart"
+endfunction
+call timer_start(5000,'CocTimerStart',{'repeat':1})
+""")

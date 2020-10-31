@@ -34,6 +34,7 @@
 - [[#code-navigation][Code Navigation]]
   - [[#easy-motion][Easy Motion]]
   - [[#vim-tmux-vimux][vim tmux (vimux)]]
+- [[#slow-machine][slow machine]]
 - [[#compile-vim-82][compile vim 8.2]]
 
 * which-key
@@ -678,6 +679,50 @@ F2 - toggle NERDTree
 ,vs - Interrupt any command running in the runner pane map
 
 ,vz - Zoom the runner pane
+
+* slow machine
+
+See
+  create_all_in_one_vimrc.py
+
+#+begin_example
+python3 create_all_in_one_vimrc.py > _vimrc
+#+end_example
+
+Load coc after vim startup
+Load ALE manually
+
+Run ALEToggle
+
+Run ALEnable
+
+Run
+:SignatureRefresh
+
+Remove below content once setup
+
+vundles.vim
+#+begin_example
+" Automatic installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+#+end_example
+
+.vimrc
+#+begin_example
+" ========== Vundle Initialization ==========
+" This loads all the plugins specified in ~/.vim/vundle.vim
+" Use Vundle plugin to manage all other plugins
+if filereadable(expand("~/.vim/vundles.vim"))
+  source ~/.vim/vundles.vim
+endif
+
+" ========== Custom Settings ==========
+source ~/.vim/settings.vim
+#+end_example
 
 * compile vim 8.2
   
