@@ -1,6 +1,7 @@
 * TOC                                                                   :TOC:
 - [[#which-key][which-key]]
 - [[#vim-signify][vim-signify]]
+- [[#searchindex][searchindex]]
 - [[#gtags][gtags]]
 - [[#lsp-coc][LSP coc]]
 - [[#lsp][LSP]]
@@ -79,6 +80,24 @@ With [!], no new tab will be opened.
   [C   Jump to the first hunk.
 #+END_EXAMPLE
 
+* searchindex
+
+https://stackoverflow.com/questions/49297579/how-to-count-search-results-in-vim
+
+My default is
+
+#+begin_example
+" Vim 8.1.1270
+set shortmess-=S
+#+end_example
+
+If vim not > 8.1.1270
+https://github.com/google/vim-searchindex
+  
+  #+begin_example
+Plug 'google/vim-searchindex'
+  #+end_example
+  
 * gtags
 
 See custom_setting/vim-gutentags.vim
