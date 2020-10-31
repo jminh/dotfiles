@@ -24,6 +24,7 @@
 - [[#vim-mundo-undo-tree][vim-mundo (undo tree)]]
 - [[#commentary-your-code][commentary your code]]
 - [[#c-clang-format][C++ clang-format]]
+- [[#grayout][grayout]]
 - [[#profile-vim-startup-time][profile vim startup time]]
 - [[#deprecated][deprecated]]
   - [[#search][Search]]
@@ -583,6 +584,29 @@ gc (in visual mode)
 vim-clang-format
 
 ,cf formatting C++ code
+
+* grayout
+
+https://github.com/mphe/grayout.vim
+
+#+begin_example
+" Set libclang searchpath. Leave empty for auto-detect.
+"let g:grayout_libclang_path = ''
+let g:grayout_libclang_path = '/path/to/libclang.so'
+#+end_example
+
+Run :GrayoutUpdate
+
+Run :GrayoutShowCommand
+
+#+begin_example
+cat .grayout.conf
+-x c++
+-DUSE_RTLCLOCK
+-DUSE_DPIOFF
+-DUSE_C_COSIM
+-DUSE_RTLCLOCK
+#+end_example
 
 * profile vim startup time
   
