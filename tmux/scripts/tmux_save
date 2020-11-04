@@ -19,9 +19,10 @@ std_output =StringIO(p.stdout.decode())
 filename = ("tmux_" + p.stdout.decode().strip() + "_" + today + "_resurrect.txt")
 print(filename)
 
-os.system("rm ~/.tmux/resurrect/*")
+#os.system("rm -rf ~/.tmux/resurrect/*")
+os.system("rm -rf ~/.tmux/`hostname`/*")
 os.system("~/.tmux/plugins/tmux-resurrect/scripts/save.sh")
 
-cmd = "cp ~/.tmux/resurrect/last ~/.tmux/%s/%s" %(hostname, filename)
+cmd = "cp ~/.tmux/%s/last ~/.tmux/%s" %(hostname, filename)
 print(cmd)
 os.system(cmd)
