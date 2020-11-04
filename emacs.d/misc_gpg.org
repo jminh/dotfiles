@@ -1,0 +1,174 @@
+
+* working version: MAC
+
+  #+begin_example
+gpg1 --version
+gpg (GnuPG) 1.4.23
+  #+end_example
+
+Previous tested version is emacs26.3  
+#+BEGIN_EXAMPLE
+HOME=~/dotfiles/emacs.d /usr/local/opt/emacs-plus@26/bin/emacs file.org
+#+END_EXAMPLE
+
+When I upgrade to emacs27.1, gpg encrypt/decrypt does not work.
+
+** mac emacs27.1
+
+$ /usr/local/bin/emacs --version
+GNU Emacs 27.1
+GPG error: "Encrypt failed"
+
+MUST
+(custom-set-variables '(epg-gpg-program  "gpg1"))
+
+my slim emacs config works on emacs27.1, emacs26.3
+HOME=~/dotfiles/emacs.d /usr/local/opt/emacs-plus@26/bin/emacs ~/to_scp/_new_pass/en-pass.org
+
+but spacemacs does not work on emacs27.1 (works on emcas26.3)
+
+brew install d12frosted/emacs-plus/emacs-plus@26
+
+> but spacemacs does not work on emacs27.1 (works on emcas26.3)
+#+begin_example
+;;    (setf epa-pinentry-mode 'loopback)
+#+end_example
+If I remove/comment above line, emacs 27.1 works!
+
+* reference
+** emacs27 EasyPG
+https://www.masteringemacs.org/article/whats-new-in-emacs-27-1
+
+'epa-pinentry-mode' is renamed to 'epg-pinentry-mode'.
+It now applies to epg functions as well as epa functions.
+
+org默认EasyPG包已经安装,也可以查找当地elpa包，查找epa-file.el即可。
+
+'epa-pinentry-mode' -> 'epg-pinentry-mode'.
+
+** emacs pinentry gpg 使用 GnuPG 的時候在 minibuffer 顯示密碼輸入
+https://coldnew.github.io/e7fdea95/
+
+~/.gnupg/gpg-agent.conf
+allow-emacs-pinentry
+allow-loopback-pinentry
+
+(optional) if you want to set timeout (second)
+pinentry-timeout 3
+
+gpgconf --reload gpg-agent
+
+See also https://emacs.stackexchange.com/questions/32881/enabling-minibuffer-pinentry-with-emacs-25-and-gnupg-2-1-on-ubuntu-xenial/32882
+
+使用 gnupg 加密你的 org-mode 文章
+  https://coldnew.github.io/4bb1df06/
+
+---
+emacs epa diff 26.3_vs_27.1
+ https://fossies.org/diffs/emacs/26.3_vs_27.1/lisp/epa.el-diff.html
+ https://www.masteringemacs.org/article/whats-new-in-emacs-27-1
+ https://colinxy.github.io/software-installation/2016/09/24/emacs25-easypg-issue.html
+
+Look up where package came from
+  https://emacs.stackexchange.com/questions/10436/look-up-where-package-came-from
+  locate-library
+
+** epg-gpg-program
+  https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24229
+  setq doesn't work for epg-gpg-program, you have to customize it.
+
+
+https://stackoverflow.com/questions/41741477/emacs-epa-and-gnupg2-no-usable-configuration
+So I ended up browsing some source files related to this question and mailed Daiki Ueno directly.
+He replied quickly, telling me to use custom-set-variables instead of setq:
+
+** 关于GPG（2.2.17）与 Emacs （26.1）不兼容的问题
+  https://emacs-china.org/t/gpg-2-2-17-emacs-26-1/10391
+
+epa official https://www.gnu.org/software/emacs/manual/html_mono/epa.html
+1. Do you use GnuPG version 2.1 or 2.0 instead of GnuPG version 1.4?
+2. Do you use symmetric encryption rather than public key encryption?
+3. Do you want to use gpg-agent?
+
+|-----+-----+-----+--------------------------------+
+| 1   | 2   | 3   | Configuration                  |
+|-----+-----+-----+--------------------------------+
+| Yes | Yes | Yes | Set up gpg-agent.              |
+| Yes | Yes | No  | You can’t, without gpg-agent.  |
+| Yes | No  | Yes | Set up gpg-agent.              |
+| Yes | No  | No  | You can’t, without gpg-agent.  |
+| No  | Yes | Yes | Set up elisp passphrase cache. |
+| No  | Yes | No  | Set up elisp passphrase cache. |
+| No  | No  | Yes | Set up gpg-agent.              |
+| No  | No  | No  | You can’t, without gpg-agent.  |
+|-----+-----+-----+--------------------------------+
+
+Current Mac
+| No  | Yes | No  | Set up elisp passphrase cache. |
+
+https://colinxy.github.io/software-installation/2016/09/24/emacs25-easypg-issue.html
+Error while decrypting with "gpg2":
+(setq epa-pinentry-mode 'loopback)
+
+** Debugging Lisp Programs
+
+https://emacs-china.org/t/edebug-elisp/14536/4  
+在 foo 定义身上按 C-u C-M-x，此时 echo area 会提示 Edebug: foo
+在 (foo 1 2) 后按 C-x C-e 会启动 edebug，此时光标会移动到函数开头，fringe 会显示个箭头
+按 e 输入 a 打印 a 的值
+
+https://www.gnu.org/software/emacs/manual/html_node/elisp/Debugging.html#Debugging
+
+
+* gpg binary, manual decrypt
+  
+gpg -o _ori_hello.txt -d _hello.tar.gpg
+
+* auto password
+  
+#+BEGIN_SRC sh
+openssl rand -base64 20
+#+END_SRC
+
+* setup
+
+GPG v1 versus GPG v2 
+Keeping Secrets in Emacs with GnuPG 
+https://www.masteringemacs.org/article/keeping-secrets-in-emacs-gnupg-auth-sources
+
+You can customize the epg-gpg-program variable to the name of the tool you want Emacs to use:
+(setq epg-gpg-program "gpg2")
+
+  M-x epa-decrypt-<region|file>	
+  M-x epa-encrypt-<region|file>	
+
+Disabling External Pin Entry
+(setenv "GPG_AGENT_INFO" nil)
+
+Emacs 25 EasyPG Issue
+https://colinxy.github.io/software-installation/2016/09/24/emacs25-easypg-issue.html
+
+Somehow emacs 25's EasyPG *only supports GnuPG 2.1* in my case, so you might have to look out for that.
+
+在 emacs 中使用 EasyPG 加密文章
+https://coldnew.github.io/d3f33ddb/
+
+使用 gnupg 加密你的 org-mode 文章
+https://coldnew.github.io/4bb1df06/
+
+  使用 GnuPG 的時候在 minibuffer 顯示密碼輸入
+  https://coldnew.github.io/e7fdea95/
+
+
+General Information About Encrypting Files with Emacs.
+https://orgmode.org/worg/org-tutorials/encrypting-files.html
+
+** workaround: Using GPG with org-mode
+https://stackoverflow.com/questions/14046333/using-gpg-with-org-mode
+
+
+
+
+  
+
+

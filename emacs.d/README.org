@@ -66,6 +66,8 @@ M-x org-decrpt-entry
 
 * org-crpt Mac gpg1
 
+Also see [[file:misc_gpg.org][misc_gpg.org]]
+  
 gpg1
 #+BEGIN_EXAMPLE
 $ which gpg1
