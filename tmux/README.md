@@ -51,6 +51,28 @@ https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/save_dir.md
 
 https://github.com/tmux-plugins/tmux-resurrect
 
+# setup tpm
+
+https://github.com/tmux-plugins/tpm
+
+Clone TPM
+```
+$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+If you're in tmux
+```
+tmux source ~/.tmux.conf
+```
+
+Managing plugins via the command line
+```
+~/.tmux/plugins/tpm/bin/install_plugins
+
+~/.tmux/plugins/tpm/bin/update_plugins all
+~/.tmux/plugins/tpm/bin/update_plugins tmux-sensible
+```
+
 # centos6 centos7 zsh version
 
 cshrc
