@@ -27,7 +27,23 @@ C-b k
 
 C-b j
 
-# save tmux state
+# save tmux state automatically
+
+For multiple machines, use $HOSTNAME to seperate the log files.
+
+```
+set -g @resurrect-dir '$HOME/.tmux/$HOSTNAME'
+set -g @continuum-save-interval '15'
+set -g @continuum-restore 'on'
+
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+```
+
+https://github.com/tmux-plugins/tmux-resurrect/pull/197
+https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/save_dir.md
+
+# save tmux state manually
 
 ```
 ./scripts/tmux_save

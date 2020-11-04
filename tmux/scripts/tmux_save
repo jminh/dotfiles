@@ -5,11 +5,14 @@ import subprocess as sp
 from io import StringIO
 from datetime import date
 
+os.system("mkdir -p ~/.tmux/`hostname`")
+
 today = str(date.today())
 
 cmd = "hostname"
 p = sp.run([cmd], stdout=sp.PIPE, shell=True)
 print(p.stdout.decode())
+hostname = p.stdout.decode().strip()
 
 std_output =StringIO(p.stdout.decode())
 
@@ -19,6 +22,6 @@ print(filename)
 os.system("rm ~/.tmux/resurrect/*")
 os.system("~/.tmux/plugins/tmux-resurrect/scripts/save.sh")
 
-cmd = "cp ~/.tmux/resurrect/last ~/.tmux/%s" %filename
+cmd = "cp ~/.tmux/resurrect/last ~/.tmux/%s/%s" %(hostname, filename)
 print(cmd)
 os.system(cmd)
