@@ -52,6 +52,10 @@ https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/save_dir.md
   ./scripts/tmux_save
 #+END_EXAMPLE
 
+#+begin_example
+while true; do ~/dotfiles/tmux/scripts/tmux_save; sleep 1800; done
+#+end_example
+
 https://github.com/tmux-plugins/tmux-resurrect
 
 * setup tpm
@@ -78,6 +82,45 @@ Managing plugins via the command line
   ~/.tmux/plugins/tpm/bin/update_plugins all
   ~/.tmux/plugins/tpm/bin/update_plugins tmux-sensible
 #+END_EXAMPLE
+
+* tmux-fzf
+
+  #+begin_example
+bind s run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
+
+bind-key "C-w" run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/window.sh"
+bind-key "C-p" run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/pane.sh"
+  #+end_example
+
+https://github.com/sainnhe/tmux-fzf/issues/6
+https://github.com/sainnhe/tmux-fzf/issues/6
+
+
+If somehow ctrl-b F does not work, you can try hard code the fzf path.
+
+#+begin_example
+tmux run-shell 'command -v fzf'
+command -v fzf
+#+end_example
+  
+  #+begin_example
+$ cd ~/.tmux/plugins/tmux-fzf
+$ git diff
+diff --git a/scripts/.fzf-tmux b/scripts/.fzf-tmux
+index fb1bc9f..26f486f 100755
+--- a/scripts/.fzf-tmux
++++ b/scripts/.fzf-tmux
+@@ -17,7 +17,7 @@ fi
+ TMUX_FZF_POPUP_HEIGHT=${TMUX_FZF_POPUP_HEIGHT:-38%}
+ TMUX_FZF_POPUP_WIDTH=${TMUX_FZF_POPUP_WIDTH:-62%}
+
+-fzf="$(command -v fzf 2> /dev/null)" || fzf="$(dirname "$0")/fzf"
++fzf=~jianmin/.fzf/bin/fzf
+ [[ -x "$fzf" ]] || fail 'fzf executable not found'
+
+ args=()
+
+  #+end_example
 
 * centos6 centos7 zsh version
 
