@@ -106,6 +106,17 @@ Plug 'google/vim-searchindex'
   
 * gtags
 
+https://github.com/universal-ctags/ctags
+#+begin_example
+ctags --version
+Universal Ctags 5.9.0(69af98e), Copyright (C) 2015 Universal Ctags Team
+
+ctags --version
+Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
+#+end_example
+
+Use Universal Ctags (Exuberant Ctags 5.8 is old)
+ 
 See custom_setting/vim-gutentags.vim
 
 #+BEGIN_EXAMPLE
@@ -150,6 +161,21 @@ let g:gutentags_project_root += []
 #+end_example
 
 ---
+
+g:gutentags_modules
+- `ctags`: generates a `tags` file using
+   a `ctags`-compatible program like Exhuberant Ctags
+   or Universal Ctags.
+
+- `gtags_cscope`: same as `cscope` but uses GNU's
+  `gtags` executable and database.
+
+Project Settings: .gutctags
+
+Also see [[file:misc.org][misc.org]].
+
+---
+
 gutentags_plus
 https://github.com/skywind3000/gutentags_plus
 Troubleshooting ERROR: gutentags: gtags-cscope job failed, returned: 1

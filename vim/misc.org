@@ -32,6 +32,82 @@ endfunction
 call timer_start(5000,'CocTimerStart',{'repeat':1})
 #+end_example
 
+* vim gtags gtags.files
+** gtags.files
+
+#+begin_example
+find . -name '*.cc' -type f > cscope.files
+find . -name '*.[ch]' -type f >> cscope.files
+
+ln -s scope.files gtags.files # for vim plugin
+#+end_example
+
+Or
+#+begin_example
+find . -type f -print >gtags.files
+#+end_example
+
+Also see http://pre.tir.tw/008/blog/output/vim_gtags_ctags_cscope.html
+
+** universal-ctags (Exuberant Ctags 5.8 huge tag file)
+
+Met a huge tag file on a project.   
+   #+begin_example
+ctags --version
+Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
+
+xxx-xxx-tags
+47G xxx-xxx-tags
+   #+end_example 
+
+https://github.com/universal-ctags/ctags
+Not seeing such huge file With universal-ctags
+
+#+begin_example
+ctags --version
+Universal Ctags 5.9.0(69af98e), Copyright (C) 2015 Universal Ctags Team
+Universal Ctags is derived from Exuberant Ctags.
+Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert
+  Compiled: Nov  6 2020, 12:18:26
+#+end_example
+
+huge tags.temp file created in some project in windows #20
+  https://github.com/ludovicchabant/vim-gutentags/issues/20
+plain ctags -R is the issue, tags file grows rapidly.
+Not sure if this should be reported somewhere?
+I thing ctags in windows is not really updated, ctags5.8 was quite old...
+
+tag file is very large #245
+  https://github.com/ludovicchabant/vim-gutentags/issues/245
+   
+** gtags CLI  
+
+   #+begin_example
+gtags
+global -u
+gtags-cscope -d
+   #+end_example
+   
+-d
+  Do not update the cross-reference.
+
+Ctrl-D quit 
+
+#+begin_example
+global -f xxxx.c | fzf
+#+end_example
+
+#+begin_example
+gtags
+htags --suggest # make hypertext(HTML/)
+#+end_example
+
+https://forum.ubuntu.org.cn/viewtopic.php?t=343460
+
+https://github.com/junegunn/fzf.vim/issues/873
+
+https://www.gnu.org/software/global/manual/global.html
+
 * vim-plug
 
 https://github.com/junegunn/vim-plug/wiki/tips
