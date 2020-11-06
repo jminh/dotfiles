@@ -85,8 +85,11 @@ Managing plugins via the command line
 
 * tmux-fzf
 
+- C-b s change session  
+- C-b l change session by fzf
+  
   #+begin_example
-bind s run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
+bind l run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
 
 bind-key "C-w" run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/window.sh"
 bind-key "C-p" run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/pane.sh"
