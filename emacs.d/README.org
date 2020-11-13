@@ -30,6 +30,34 @@ Emacs from scratch
 
 https://emacs.stackexchange.com/questions/27339/how-to-operate-the-undo-redo-tree-in-spacemacs
 
+
+* chemacs
+
+  #+begin_example
+cat ~/.emacs-profiles.el
+(("home" . ((user-emacs-directory . "/u/jianmin/share/.emacs.d")))
+ ("default" . ((user-emacs-directory . "/u/jianmin/doom-emacs")))
+ ("spacemacs" . ((user-emacs-directory . "/u/jianmin/home10G/spacemacs")
+                 (env . (("SPACEMACSDIR" . "~/.spacemacs.d")))))
+ )
+  #+end_example
+
+  #+begin_example
+emacs clock.org
+emacs --with-profile spacemacs clock.org
+emacs --with-profile doom clock.org
+  #+end_example
+
+https://github.com/plexus/chemacs
+https://medium.com/dev-genius/how-to-set-up-multiple-custom-emacs-configurations-for-one-user-using-chemacs-102cdd617677
+https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org#install-doom-alongside-other-configs-with-chemacs
+
+#+begin_example
+git clone https://github.com/plexus/chemacs.git
+cd chemacs
+./install.sh
+#+end_example
+
 * org-crpt Linux gpg2
 
 #+BEGIN_EXAMPLE
