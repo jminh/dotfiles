@@ -88,6 +88,13 @@ set -g @continuum-save-interval '60'
 The default 15 min is OK. This plugin does not save state periodically. The save operation is triggered by
 tmux state change (status-right) if the time diff > 15 min.
 
+---
+
+Save & Restore Hooks
+  https://github.com/tmux-plugins/tmux-resurrect/blob/master/docs/hooks.md
+  
+Hooks allow to set custom commands that will be executed during session save and restore.
+
 * save tmux state manually
 
 #+BEGIN_EXAMPLE
