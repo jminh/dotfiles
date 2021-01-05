@@ -69,3 +69,12 @@ my-feature.el
 
 (require 'my-feature)
 
+
+* windows setup
+
+On msys2 terminal
+  
+  #+begin_example
+cd /c/Users/ming/AppData/Roaming
+git clone -b develop https://github.com/syl20bnr/spacemacs .emacs.d
+  #+end_example
