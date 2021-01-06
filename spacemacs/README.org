@@ -77,4 +77,6 @@ On msys2 terminal
   #+begin_example
 cd /c/Users/ming/AppData/Roaming
 git clone -b develop https://github.com/syl20bnr/spacemacs .emacs.d
+
+ln -s ~/dotfiles/spacemacs/.spacemacs.d .
   #+end_example
