@@ -58,6 +58,43 @@ cd chemacs
 ./install.sh
 #+end_example
 
+* chemacs2
+
+  #+begin_example
+[ -f ~/.emacs ] && mv ~/.emacs ~/.emacs.bak
+[ -d ~/.emacs.d ] && mv ~/.emacs.d ~/.emacs.default
+
+git clone https://github.com/plexus/chemacs2.git ~/.emacs.d
+  #+end_example
+
+  #+begin_example
+cat ~/.emacs-profiles.el
+
+(("default" . ((user-emacs-directory . "~/.emacs.default"))))
+  #+end_example
+
+Spacemacs
+
+Spacemacs is typically installed by cloning the Spacemacs repo to ~/.emacs.d,
+and doing extra customization from ~/.spacemacs or ~/.spacemacs.d/init.el. This
+makes it tedious to switch between version of Spacemacs, or between different
+Spacemacs configurations.
+
+With Chemacs you can point your user-emacs-directory to wherever you have
+Spacemacs installed, and use the SPACEMACSDIR environment variable to point at a
+directory with customizations that are applied on top of the base install.
+
+#+begin_example
+(("spacemacs" . ((user-emacs-directory . "~/spacemacs")
+                 (env . (("SPACEMACSDIR" . "~/.spacemacs.d")))))
+
+ ("spacemacs-develop" . ((user-emacs-directory . "~/spacemacs/develop")
+                        (env . (("SPACEMACSDIR" . "~/.spacemacs.d")))))
+
+ ("new-config" . ((user-emacs-directory . "~/spacemacs/develop")
+                  (env . (("SPACEMACSDIR" . "~/my-spacemacs-config"))))))
+#+end_example
+
 * org-crpt Linux gpg2
 
 #+BEGIN_EXAMPLE
