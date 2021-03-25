@@ -1,0 +1,21 @@
+
+* starship
+
+  #+begin_example
+mkdir -p $HOME/local/precompiled/startship
+cd $HOME/local/precompiled/startship
+curl -fsSL https://starship.rs/install.sh > install.sh
+sh install.sh -b $HOME/local/precompiled/startship
+  #+end_example  
+
+  #+begin_example
+ln -s ~/dotfiles/bash/.bashrc .
+ln -s ~/dotfiles/config/starship.toml
+  #+end_example  
+
+.bashrc  
+  #+begin_example
+export PATH=$HOME/local/precompiled/startship:$PATH 
+#Add the following to the end of ~/.bashrc:
+eval "$(starship init bash)"
+  #+end_example
