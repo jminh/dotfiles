@@ -1,0 +1,12 @@
+[username]
+disabled = true
+
+[memory_usage]
+disabled = false
+threshold = 70
+
+[status]
+map_symbol = true
+disabled = false 
+
+
