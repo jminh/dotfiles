@@ -166,9 +166,18 @@ https://orgmode.org/worg/org-tutorials/encrypting-files.html
 ** workaround: Using GPG with org-mode
 https://stackoverflow.com/questions/14046333/using-gpg-with-org-mode
 
+* org-crypt doesn't automatically encrypt on save
 
+Re: [O] org-crypt doesn't automatically encrypt on save
+https://lists.gnu.org/archive/html/emacs-orgmode/2014-09/msg00319.html
 
+https://stackoverflow.com/questions/44631398/how-to-encrypt-individual-headings-in-org-mode
 
-  
-
+#+begin_src elisp
+(defun my-find-senhas-org-heading nil
+  (interactive)
+  (require 'org-crypt)
+  (find-file "~/passwords.org")
+  )
+#+end_src
 
