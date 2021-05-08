@@ -48,7 +48,7 @@ This function should only modify configuration layer settings."
      ;; markdown
      multiple-cursors
      org
-     org-roam
+     ;;org-roam
      c-c++
      ;;gtags
      (lsp :variables

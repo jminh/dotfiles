@@ -1,0 +1,59 @@
+
+Newer spacemacs develop version support org-roam which would lead below warning
+if you use org-roam layer.
+
+#+begin_example
+                - More than one init function found for package org-roam. Previous owner was org,
+                  replacing it with layer org-roam.
+#+end_example
+
+#+begin_example
+   dotspacemacs-configuration-layers
+   '(
+     org-roam
+#+end_example
+
+If you modify/rename this layer to _org-roam
+
+#+begin_example
+   dotspacemacs-configuration-layers
+   '(
+     _org-roam
+#+end_example
+
+You would see this warning
+
+#+begin_example
+Warnings:
+    - More than one init function found for package org-roam. Previous owner was org,
+      replacing it with layer _org-roam.
+#+end_example
+
+#+begin_example
+diff org-roam/packages.el _org-roam/packages.el                                                                                                 (master !?)
+1c1
+< (defconst org-roam-packages '((org-roam :location elpa)
+---
+> (defconst _org-roam-packages '((org-roam :location elpa)
+4c4
+< (defun org-roam/init-org-roam-server ()
+---
+> (defun _org-roam/init-org-roam-server ()
+30c30
+< (defun org-roam/init-org-roam ()
+---
+> (defun _org-roam/init-org-roam ()
+51c51
+< (defun org-roam/init-org-roam-server ()
+---
+> (defun _org-roam/init-org-roam-server ()
+#+end_example
+
+Anyway, this layer is not needed since org-roam is supported in org layer in the
+spaceamcs develop branch with below setting.
+
+#+begin_example
+(setq-default dotspacemacs-configuration-layers '(
+  (org :variables
+       org-enable-roam-support t)))
+#+end_example
