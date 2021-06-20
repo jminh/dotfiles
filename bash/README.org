@@ -19,3 +19,8 @@ export PATH=$HOME/local/precompiled/startship:$PATH
 #Add the following to the end of ~/.bashrc:
 eval "$(starship init bash)"
   #+end_example
+
+* misc  
+
+Be more productive with use of your BASH history
+  https://cyb.org.uk/2021/05/03/bash-productivity.html
