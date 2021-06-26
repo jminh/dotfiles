@@ -34,6 +34,29 @@ fisher add ./fzf/
 https://github.com/jethrokuan/fzf
 https://github.com/jorgebucaran/fisher
 
+* command duration
+
+~/.config/fish/functions/rprompt.fish
+
+#+begin_example
+function fish_right_prompt
+    if test $CMD_DURATION
+        # Show duration of the last command in seconds
+        set duration (echo "$CMD_DURATION 1000" | awk '{printf "%.3fs", $1 / $2}')
+        echo $duration
+    end
+    echo "😄"
+end
+#+end_example
+
+~/.config/fish/config.fish
+
+#+begin_example
+. ~/.config/fish/functions/rprompt.fish
+#+end_example
+  
+https://adrian-philipp.com/post/cmd-duration-fish-shell
+  
 * manual installation
 
   #+begin_example
