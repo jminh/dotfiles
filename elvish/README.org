@@ -1,0 +1,18 @@
+
+~/.elvish/rc.elv
+
+#+begin_example
+use readline-binding
+edit:rprompt = { put $edit:command-duration }
+
+fn ls [@a]{ e:ls --color $@a }
+#+end_example
+
+HEAD version
+#+begin_example
+wegt https://dl.elv.sh/linux-amd64/elvish-HEAD.tar.gz
+#+end_example
+
+https://github.com/elves/elvish
+
+https://elv.sh/get/
