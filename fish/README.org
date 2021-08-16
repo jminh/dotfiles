@@ -7,6 +7,15 @@ fish
 
 Out of the box colors, autosuggestions and other features.
 
+* prompt
+
+  #+begin_example
+  fish_config prompt choose informative
+  #+end_example
+
+Add it in
+~/.config/fish/config.fish
+
 * ctrl-r history fzf
 
 Get fisher
@@ -38,6 +47,9 @@ https://github.com/jorgebucaran/fisher
 
 ~/.config/fish/functions/rprompt.fish
 
+(1) ~/.config/fish/functions/rprompt.fish
+(2) ~/.config/fish/config.fish
+
 #+begin_example
 function fish_right_prompt
     if test $CMD_DURATION
@@ -45,7 +57,6 @@ function fish_right_prompt
         set duration (echo "$CMD_DURATION 1000" | awk '{printf "%.3fs", $1 / $2}')
         echo $duration
     end
-    echo "😄"
 end
 #+end_example
 
