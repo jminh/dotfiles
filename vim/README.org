@@ -616,7 +616,9 @@ https://github.com/vim-scripts/a.vim
 ,tt - toggle Tagbar
 
 * Mark
-  
+
+Plug 'vim-scripts/Mark'
+
 ,m - mark or unmark the word under (or before) the cursor
 
 https://github.com/vim-scripts/Mark mark.vim should be re-sourced after
