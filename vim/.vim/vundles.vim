@@ -78,6 +78,11 @@ Plug 'mhinz/vim-signify'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+Plug 'pechorin/any-jump.vim'
+let g:any_jump_disable_default_keybindings = 1
+let g:any_jump_search_prefered_engine = 'ag'
+let g:any_jump_references_only_for_current_filetype = 1
+
 " need python3 support
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 let g:Lf_PreviewInPopup = 1

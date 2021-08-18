@@ -22,6 +22,7 @@
 - [[#mark][Mark]]
 - [[#yank][Yank]]
 - [[#ctrlsf][ctrlsf]]
+- [[#any-jump][any-jump]]
 - [[#vim-bookmarks][vim-bookmarks]]
 - [[#mark-vim-signature][mark vim-signature]]
 - [[#vim-mundo-undo-tree][vim-mundo (undo tree)]]
@@ -641,6 +642,18 @@ autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", ti
 * ctrlsf
   
 C-F f :Search the current word
+
+* any-jump
+
+pechorin/any-jump.vim
+
+1. <leader>j or execute :AnyJump in normal mode.
+
+2. use visual mode to select proper keyword (j also works in visual
+mode)
+
+3. With :AnyJumpArg myKeyword command you can manually write what you want to be
+searched for.
 
 * vim-bookmarks
 
