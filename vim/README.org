@@ -20,6 +20,7 @@
 - [[#avim][a.vim]]
 - [[#tagbar][Tagbar]]
 - [[#mark][Mark]]
+- [[#yank][Yank]]
 - [[#ctrlsf][ctrlsf]]
 - [[#vim-bookmarks][vim-bookmarks]]
 - [[#mark-vim-signature][mark vim-signature]]
@@ -625,6 +626,17 @@ https://github.com/vim-scripts/Mark mark.vim should be re-sourced after
 any changing to colors. For example, if you :set background=dark OR
 :colorscheme default you should :source PATH_OF_PLUGINS/mark.vim after
 that. Otherwise, you won't see the colors.
+
+* Yank
+
+vim-highlightedyank
+let g:highlightedyank_highlight_duration = 1000
+
+neovim 5.0
+
+#+begin_example
+autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
+#+end_example
 
 * ctrlsf
   

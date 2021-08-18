@@ -244,6 +244,9 @@ Plug 'tpope/vim-commentary'
 " }}}
 
 " imporvements {{{
+Plug 'machakann/vim-highlightedyank'
+let g:highlightedyank_highlight_duration = 500
+
 " Readline style insertion (similar to Emacs key bindings)
 "Plugin 'tpope/vim-rsi'
 "Plugin 'AndrewRadev/linediff.vim'
