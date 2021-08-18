@@ -37,6 +37,7 @@
 - [[#code-navigation][Code Navigation]]
   - [[#easy-motion][Easy Motion]]
   - [[#vim-tmux-vimux][vim tmux (vimux)]]
+- [[#repl-tmux-ipython][REPL tmux ipython]]
 - [[#slow-machine][slow machine]]
   -  [[#create_all_in_one_vimrcpy][create_all_in_one_vimrc.py]]
   - [[#how-to-local-modify][HOW to local modify]]
@@ -783,6 +784,28 @@ F2 - toggle NERDTree
 ,vs - Interrupt any command running in the runner pane map
 
 ,vz - Zoom the runner pane
+
+* REPL tmux ipython
+
+https://github.com/jpalardy/vim-slime
+
+IPython setting
+
+#+begin_example
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
+let g:slime_python_ipython = 1
+#+end_example
+
+Put your cursor over the text you want to send and type:
+ctrl-c ctrl-c --- the same as slime
+
+The current paragraph — what would be selected if you typed vip — is
+automatically selected.
+
+https://github.com/jpalardy/vim-slime/issues/246
+
+https://github.com/jpalardy/vim-slime/issues/246
 
 * slow machine
 **  create_all_in_one_vimrc.py
