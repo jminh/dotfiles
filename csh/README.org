@@ -1,0 +1,27 @@
+
+#+begin_example
+cat ~/bin/gitprompt.csh
+
+setenv GIT_BRANCH_CMD "sh -c 'git branch --no-color 2> /dev/null' | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'"
+set prompt="%m:%~ `$GIT_BRANCH_CMD`%B%#%b "
+#+end_example
+
+cat ~/.cshrc
+#+begin_example
+alias precmd "source ~/bin/gitprompt.csh"
+#+end_example
+
+Source:
+  https://gist.github.com/nicwolff/2925803
+
+Misc:
+  https://zhuanlan.zhihu.com/p/51008087
+
+why zsh
+  https://www.slideshare.net/jaguardesignstudio/why-zsh-is-cooler-than-your-shell-16194692
+
+    zsh: path replacement (page39)
+      cd bin share
+    zsh: global aliases, suffix aliases (page48)
+    zsh: extendded globbing (page51)
+    zsh: enviroment varialbe editing (page 52)
