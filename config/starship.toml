@@ -7,6 +7,7 @@ threshold = 70
 
 [status]
 map_symbol = true
-disabled = false 
+disabled = false
 
-
+[python]
+disabled = false

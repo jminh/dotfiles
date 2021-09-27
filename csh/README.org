@@ -1,4 +1,6 @@
 
+* csh prompt
+
 #+begin_example
 cat ~/bin/gitprompt.csh
 
@@ -25,3 +27,21 @@ why zsh
     zsh: global aliases, suffix aliases (page48)
     zsh: extendded globbing (page51)
     zsh: enviroment varialbe editing (page 52)
+
+* csh starship prompt
+
+https://github.com/starship/starship
+
+Add the following to the end of ~/.tcshrc:
+
+#+begin_example
+# ~/.tcshrc
+# or
+# ~/.cshrc
+
+eval `starship init tcsh`
+#+end_example
+
+#+begin_example
+ln -s ~/dotfiles/config/starship.toml
+#+end_example
