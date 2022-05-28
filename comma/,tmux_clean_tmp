@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Issue
+#  $ ts run
+#  lost server
+
+# $ id -u `whoami`
+# 41058
+
+rm -rf /tmp/tmux-41058/default && rm -rf /tmp/tmux-41058/ && mkdir -p /tmp/tmux-41058
