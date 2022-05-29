@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+#https://stackoverflow.com/questions/54468368/how-to-find-tmux-window-pane-from-a-tty
+tmux switch-client -t $(tmux list-panes -aF "#{pane_tty}:#{pane_id}" | sort | fzf | grep -oE "[^:]*$")
