@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# method 1
+# In case you want to keep the session you are in and kill all the other sessions, run the command:
+# $ tmux kill-session -a 
+
+# method 2
+# tmux list-sessions | awk 'BEGIN{FS=":"}{print $1}'
+# tmux list-sessions | awk 'BEGIN{FS=":"}{print $1}' | xargs -n 1 tmux kill-session -t
+
+# tl
+# j: 1 windows (created Sun May 29 09:21:40 2022) [171x42]
+# k: 2 windows (created Sun May 29 09:21:46 2022) [171x42]
+# tmux list-sessions | awk 'BEGIN{FS=":"}{print $1}'
+# j
+# k
+
+# method 3 https://askubuntu.com/questions/868186/how-to-kill-all-tmux-sessions-or-at-least-multiple-sessions-from-the-cli
+tmux kill-server
+
+# Save your tmux state: you may want to svae it before kill all
+# ~/dotfiles/tmux/scripts/tmux_save
