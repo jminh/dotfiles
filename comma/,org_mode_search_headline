@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo 'rg -L '^[*]' | rg . | fzf '
+echo ''
+echo 'grep -r '^\*' * | fzy'
+echo 'grep -r '^\*' * | fzf'
