@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+exec dust -d1
+#du -sh * | sort -k1 -rh
+
+# du -sh * | sort -k1 -rh slow than dust -d1
+# In a folder
+
+# 748G A
+# 560G B
+# 417G C
+# 383G D
+# 313G E
+# 262G F
+# ...
+# total 3.9T
+
+# du sort takes 5h 48m 25s
+# dust -d1 takes 2h 54m 58s
