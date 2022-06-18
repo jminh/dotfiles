@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo '--------'
+echo PATH
+echo '--------'
+echo $PATH | tr ':' '\n'
+echo '-----------------'
+echo LD_LIBRARY_PATH
+echo '-----------------'
+echo $LD_LIBRARY_PATH | tr ':' '\n'
