@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+#https://github.com/dalance/procs
+exec procs `id -u` -w 15
+
+# procs --sortd cpu
+# procs --sortd rss
