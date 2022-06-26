@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# https://tools.suckless.org/tabbed/
+# ssh -X hello "tabbed -r 2 st -w ''"
+
+exec st -f "Inconsolata:style=Regular:size=16"
