@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec ps aux|grep $(whoami)|grep -v -w '?'|grep -v -w '\-zsh'| grep -v -w '\-tcsh' |grep -v -w vim|grep -v -w tmux
