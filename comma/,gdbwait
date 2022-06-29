@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# usage: ,gdbwait simv
+
+progstr=$1
+progpid=`pgrep -u $(whoami) -n $progstr`
+while [ "$progpid" = "" ]; do
+    progpid=`pgrep -u $(whoami) -n $progstr`
+done
+
+echo "attach PID: " $progpid
+echo ""
+exec gdb -p $progpid
+
+# gdb -ex 'b arrow::stl::TupleRangeFromTable' -ex 'c' -p $progpid
