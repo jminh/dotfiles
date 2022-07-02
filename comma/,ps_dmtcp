@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
+# make sure there is no leftover dmtcp process.
+
 exec ps aux|grep $(whoami)|grep -i dmtcp|grep -v grep
