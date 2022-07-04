@@ -13,3 +13,17 @@ echo ""
 exec gdb -p $progpid
 
 # gdb -ex 'b arrow::stl::TupleRangeFromTable' -ex 'c' -p $progpid
+
+# ------------------------------
+# https://stackoverflow.com/questions/25274752/gdb-how-to-execute-target-program-from-script 
+# gdb --tty /dev/pts/14 --args make run
+# ------------------------------
+# set detach-on-fork off
+# set target-async on
+# set non-stop on
+# set pagination off
+# add-inferior -exec testbench
+# inferior 2
+# break tb_top.cc:224
+# inferior 1
+# run
