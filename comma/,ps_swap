@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+free -h
+exec sar -B 1 20
+# sar -B 1 20
+# vmstat 1 20
+  # http://northernmost.org/blog/swap-usage-5-years-later
+
+# top https://www.reddit.com/r/linux/comments/b81e40/how_to_quickly_check_which_processes_are_using/
+# https://www.igorkromin.net/index.php/2019/03/03/how-to-quickly-check-which-processes-are-using-most-swap-space-in-linux
+
+# https://stackoverflow.com/questions/479953/how-to-find-out-which-processes-are-using-swap-space-in-linux
+# Run top then press O p Enter.
+
+# https://www.thegeekdiary.com/how-to-check-swap-usage-of-each-processes-in-linux
+# for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | more
