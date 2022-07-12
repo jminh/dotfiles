@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#export PATH=...
+#export LD_LIBRARY_PATH=...
+
+# Sometimes when you source a scirpt you may get a different env (PATH, LD_LIBRARY_PATH).
+# In that case, you can use ",e" to get the require env.
+
+# Usage: ,e rg
+# Usage: ,e fd
+# Usage: ,e vim
+
+exec "$@"
