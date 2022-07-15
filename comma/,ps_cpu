@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# https://www.linuxfordevices.com/tutorials/linux/find-top-running-processes
+# perf https://linuxopsys.com/topics/command-line-tools-to-check-cpu-usage-in-linux
+
+exec ps aux --sort -%cpu
