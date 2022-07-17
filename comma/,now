@@ -1,0 +1,14 @@
+#!/usr/bin/env bb
+
+(def now (java.time.ZonedDateTime/now))
+(def LA-timezone (java.time.ZoneId/of "America/Los_Angeles"))
+(def LA-time (.withZoneSameInstant now LA-timezone))
+(def pattern (java.time.format.DateTimeFormatter/ofPattern "MM-dd HH:mm"))
+
+(def Taiwan-timezone (java.time.ZoneId/of "Asia/Taipei"))
+(def Taiwan-time (.withZoneSameInstant now Taiwan-timezone))
+
+(println (str "    MV " (.format LA-time pattern)))
+(println (str "Taiwan " (.format Taiwan-time pattern)))
+
+# echo $(TZ='Asia/Taipei' date +"%d-%m-%Y") $(TZ='Asia/Taipei' date +"%T")
