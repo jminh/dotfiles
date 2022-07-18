@@ -1,0 +1,49 @@
+#!/usr/bin/env python2
+import sys
+import random
+
+### Usage
+### python2.7
+### ./mem_gen m1.dump > m1.dump_
+
+### head -n5 m1.dump
+### // memory: top_tb.dut.mmc_device_driver_0.mmc_core.sqnod4561.sqnod214.sqnod179.sqnod65 , depth=16384, width=8
+### // verilog-H memory format
+### 00
+### 00
+### 00
+
+### head -n5 zmf1.txt
+### // memory: top_tb.dut.u_dune_core.u_ddr_ss_soc.u_ddr_soc.ins_lpddr4_X2.zlpddr4.sqnod371.sqnod111 , depth=536870912, width=32
+### // verilog-H memory format
+### @aaaaaab
+### 00000000
+### 00000000
+
+HEX = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+
+count = 1
+for line in open(sys.argv[1]):
+    if count == 1:
+        first = line.strip()
+        if not line.startswith("// memory:"):
+            print "ERROR ERROR ERROR %s" %(line.strip())
+    if count == 2:
+        if line.strip() != "// verilog-H memory format":
+            print "ERROR ERROR ERROR %s" %(line.strip())
+    print line.strip()
+
+    if count == 1 or count ==2:
+        count += 1
+        continue
+    count += 1
+
+    if line.startswith("@"):
+        print line.strip()
+    else:
+        if first.endswith("width=32"):
+            print("%s%s%s%s%s%s%s%s" %(random.choice(HEX), random.choice(HEX), random.choice(HEX), random.choice(HEX), random.choice(HEX), random.choice(HEX), random.choice(HEX), random.choice(HEX)))
+        elif first.endswith("width=8"):
+            print("%s%s" %(random.choice(HEX), random.choice(HEX)))
+        else:
+            print "ERROR ERROR ERROR %s" %(line.strip())
