@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#lsof +D ./aura | awk '{print $2}' | tail -n +2
+#lsof +D ./aura | awk '{print $2}' | tail -n +2 | xargs -r kill
+#lsof +D ./aura | awk '{print $2}' | tail -n +2 | xargs -r kill -9
+
+#Do not use
+#lsof +D ./
+# (it seems lsof itself process is present)
+# https://unix.stackexchange.com/questions/11238/how-to-get-over-device-or-resource-busy
+#  https://stackoverflow.com/questions/8296710/how-to-ignore-xargs-commands-if-stdin-input-is-empty/19038748#19038748
+
+echo "lsof +D ./aura | awk '{print $2}' | tail -n +2 | xargs -r kill"
