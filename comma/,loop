@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+echo """
+loop --every 5min  -- 'pstack 367854 > p$COUNT.pstack'
+
+loop -until-success -- ./prog
+loop -until-fail    -- ./prog
+
+# Keep trying a failing script until it passes, up to 5 times
+loop --every 15s --num 5 -until-success -- ./prog
+
+loop --num 100 --count-by 1 -- './prog > loop_$COUNT.txt'
+loop --every 5s --num 100 -until-fail -- ./prog
+
+run.sh
+    timeout 9m make run --trace 2>&1
+loop --num 20 --count-by 1 -- './run.sh | tee loop/loop_$COUNT.txt'"""
+
+echo """
+csh >&, bash &> , bash |&
+
+https://stackoverflow.com/questions/11255447/what-does-mean
+>& is the syntax used by csh and tcsh to redirect both stdout and stderr. That's
+probably why bash accepts it.
+
+What does \"|&\" mean in Bash?
+  https://stackoverflow.com/questions/35384999/what-does-mean-in-bash
+
+  It is just like the pipe operator |, but piping both standard output and
+  standard error."""
