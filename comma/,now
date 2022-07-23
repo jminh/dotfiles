@@ -11,8 +11,15 @@
 (println (str "    MV " (.format LA-time pattern)))
 (println (str "Taiwan " (.format Taiwan-time pattern)))
 
+# --- TZ date
 # echo $(TZ='Asia/Taipei' date +"%d-%m-%Y") $(TZ='Asia/Taipei' date +"%T")
 #
 # Asia/Taipei <-> PDT
 # env TZ='Asia/Taipei' date -d '7/16 4pm PDT'
 # Sun Jul 17 07:00:00 CST 2022
+#
+# --- TZ ls
+#  $ \ls -al regrun.log
+#  -rw-r--r-- 1 ming hello 11040 Jun 19 15:07 regrun.log
+#  $ env TZ='Asia/Taipei' ls -al regrun.log
+#  -rw-r--r-- 1 ming hello 11040 Jun 20 06:07 regrun.log
