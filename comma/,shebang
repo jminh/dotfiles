@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo """#!/usr/bin/env bash
+
+#!/remote/vgsource10/jianmin/time/time/bin/python3
+
+#!/usr/bin/env bb
+#!/bin/csh -f
+
+# vim: set filetype=csh :
+syntax=perl"""
