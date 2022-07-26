@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+import sys
+
+csh  = sys.argv[1]
+
+for line in open(csh):
+    strip_line = line.strip()
+    if strip_line.startswith("#"):
+        continue
+    if strip_line.startswith("setenv "):
+        translate = strip_line.lstrip("setenv ").split()
+        #print("=".join(translate))
+        translate = "export " + "=".join(translate)
+        print(translate)
+        continue
+    if "source" in line and strip_line.endswith("zebu_env.csh"):
+        print(strip_line.rstrip("zebu_env.csh") + "zebu_env.bash")
+        continue
+    print(strip_line)
