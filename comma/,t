@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# alias t='/usr/bin/time -f "%E"'
+exec /usr/bin/time -f "%E" "$@"
