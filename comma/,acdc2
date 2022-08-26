@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+HOST=$(gum choose "host354" "host310")
+# https://github.com/charmbracelet/gum
+echo "Run  acdc2 $HOST:12503"
+exec acdc2 $HOST:12503
