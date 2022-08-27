@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# also see ,now
+
+exec date --utc +%Y-%m-%dT%TZ
