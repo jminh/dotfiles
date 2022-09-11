@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
+# st - simple terminal https://st.suckless.org/
+
 # https://tools.suckless.org/tabbed/
 # ssh -X hello "tabbed -r 2 st -w ''"
+
+# Shift page-up/Shift page-down to scroll up and down
 
 exec st -f "Inconsolata:style=Regular:size=16"
