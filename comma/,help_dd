@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+echo """
+Ensure drop cache for the whole file
+https://unix.stackexchange.com/questions/36907/drop-a-specific-file-from-the-linux-filesystem-cache
+
+dd of=/path/to/file oflag=nocache conv=notrunc,fdatasync count=0
+"""
