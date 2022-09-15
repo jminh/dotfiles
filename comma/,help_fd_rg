@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+echo """
+rg --max-depth=1 HELLO
+   https://github.com/BurntSushi/ripgrep/issues/1056
+---
+
+fd -e cpp -e cxx -e h -e hpp -X rg 'std::cout'
+
+  fd make_run.log -X rg 'lnlu error'
+  find . -name 'make_run.log' -exec grep -H "lnlu error" {} \;
+
+    fd -H coc-settings.json -X rg 'clangd'
+
+For example, to recursively remove all .DS_Store files, run:
+
+  fd -H '^\.DS_Store$' -tf -X rm
+
+fd -HI --type executable bear
+
+Find all test_*.py files and open them in your favorite editor:
+
+  fd -g 'test_*.py' -X vim
+
+Find all *.h and *.cpp files and auto-format them inplace with clang-format -i:
+
+  fd -e h -e cpp -x clang-format -i
+
+Note that we use capital -X here to open a single vim instance.
+
+---
+
+  -H, --hidden Search hidden files and directories
+    -g, --glob   Glob-based search (default: regular expression)
+      -L, --follow Follow symbolic links
+
+      -e, --extension <ext>... Filter by file extension
+
+      -x, --exec <cmd>       Execute a command for each search result
+      -X, --exec-batch <cmd> Execute a command with all search results at once
+      -E, --exclude <pattern>... Exclude entries that match the given glob pattern
+
+      -t, --type <filetype>... Filter by type: file (f), directory (d), symlink (l), executable (x), empty (e), socket (s), pipe (p)
+
+---
+
+rg --files --type cpp --type c > cscope.files
+cscope -q -R -b -i cscope.files
+cscope -d
+
+rm cscope.out cscope.po.out cscope.in.out tags
+"""
+
