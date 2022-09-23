@@ -8,4 +8,6 @@ echo """#!/usr/bin/env bash
 #!/bin/csh -f
 
 # vim: set filetype=csh :
+# vi: ft=gdb
+
 syntax=perl"""
