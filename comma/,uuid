@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+import uuid
+
+#print("UUID('%s')" %uuid.uuid1())
+UUID = "UUID('%s')" %uuid.uuid1()
+
+print(UUID)
+print('search %s' %UUID)
