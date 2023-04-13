@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo """
+tmux detach -a"""
+
+echo """
+tmux capture-pane -p -S -10000 | vim -"""
