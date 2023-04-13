@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# tmux capture-pane -p -S -10000 | vim -
+tmux capture-pane -p -S -10000 > tmux_`TZ='Asia/Taipei' date +"%Y-%m%d_%H%M"`.log
