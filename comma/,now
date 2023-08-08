@@ -30,3 +30,17 @@
 #  -rw-r--r-- 1 ming hello 11040 Jun 19 15:07 regrun.log
 #  $ env TZ='Asia/Taipei' ls -al regrun.log
 #  -rw-r--r-- 1 ming hello 11040 Jun 20 06:07 regrun.log
+#
+#  --- week number
+#  $ date +"W%U"
+#  W30
+#  $ date +"W%U_%m%d"
+#  W32_0807
+
+# --- timezone   https://www.baeldung.com/linux/current-system-time-zone
+#  use the date command with the %Z format to get the abbreviated name of the time zone
+#  $ date +%Z
+#  CEST
+#  print the time zone in its UTC offset representation with the %z format:
+#  $ date +%z
+#  +0800
