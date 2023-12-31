@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 echo """#!/usr/bin/env bash
+set -euo pipefail
 
 #!/remote/vgsource10/jianmin/time/time/bin/python3
 
