@@ -3,6 +3,11 @@
 echo """
 rg --max-depth=1 HELLO
    https://github.com/BurntSushi/ripgrep/issues/1056
+
+   -F, --fixed-strings  Treat the pattern as a literal string instead of
+                        a regular expression.
+   -F should never be used for performance reasons.
+   https://github.com/BurntSushi/ripgrep/issues/190
 ---
 
 fd -e cpp -e cxx -e h -e hpp -X rg 'std::cout'
