@@ -45,3 +45,10 @@ eval `starship init tcsh`
 #+begin_example
 ln -s ~/dotfiles/config/starship.toml
 #+end_example
+
+* csh | You don't need to use csh. Use whatever shell you like
+
+#+begin_example
+exec csh -c "source tool_env.csh && exec zsh"
+# source: fish bass https://github.com/edc/bass
+#+end_example
