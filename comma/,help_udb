@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+
+print("""
+info source
+
+ugo start, ugo end
+
+live-record \
+ -o attach_$(TZ='Asia/Taipei' date +"%Y-%m%d_%H%M").undo -p `pgrep -o -u ming hRun`
+ -o  start_$(TZ='Asia/Taipei' date +"%Y-%m%d_%H%M").undo
+ -o starti_$(TZ='Asia/Taipei' date +"%Y-%m%d_%H%M").undo --record-on immediate
+ --recording-dir record_child                            --record-on program:hRun
+
+ """)
