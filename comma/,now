@@ -44,3 +44,6 @@
 #  print the time zone in its UTC offset representation with the %z format:
 #  $ date +%z
 #  +0800
+#
+#  UTC
+#  TZ=UTC date; date -u; date --utc
