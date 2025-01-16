@@ -15,7 +15,10 @@ p4 clients|grep client_name
 
 # To create a changelist from the current default changelist
 p4 change
+# To create a shelved changelist
 p4 shelve -c 123456
+  # To delete
+  p4 shelve -d -c 123456
 
 # To unshelve the files that were shelved from a changelist 123456 back to the default changelist:
 p4 unshelve -s 123456
