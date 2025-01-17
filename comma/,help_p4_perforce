@@ -33,4 +33,7 @@ p4v | Modify a submitted commit message for a submitted changelist
     Clieck Search
     Click Go To...
       Type the Changelist number
-        """)
+
+# Use 'p4 client' when you move perforce worksapce to edit Root path as shown below:
+p4 client
+  Root:   /path/to/project/root""")
