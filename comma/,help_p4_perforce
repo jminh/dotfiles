@@ -9,6 +9,12 @@ print ("""
 # Remove all p4 files to reset the repo status
 p4 sync ...#0 > /dev/null
 
+# Display unified diff
+p4 diff -du /path/to/file
+
+# Perforce can’t actually tell you when you last ran the sync command, but it can give you a clue. The CL your workspace was probably last synchronized with.
+p4 changes -m1 ...#have
+
 # Find code review author's workspace
 p4 changes -m 5 -s pending -u ming
 p4 clients|grep client_name
